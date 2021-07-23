@@ -19,8 +19,10 @@ We developed a set of accessible (colorful and explained with “normal” langu
 In this way, the data that was available through the OpenTree platform is now made accessible to a wider audience.
 
 
-How do we make R and Python function documentation more accessible?
-Fun examples with charismatic organisms
+
+How do we make R and Python function documentationusage more accessible?
+Create documents that persist, so they are available for the users to go back to them any time they need them, and to be passed on to other users.
+Fun examples with Use charismatic organisms to make examples
 Demonstrate errors
 Demonstrate warnings
 Help users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries)
