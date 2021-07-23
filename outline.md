@@ -1,3 +1,5 @@
+JSDSE Call for papers [here](https://nhorton.people.amherst.edu/call_reproducibility.pdf)
+
 Subject: “Teaching reproducibility and responsible workflow”
 
 Premise:
@@ -22,5 +24,21 @@ Incorporating source code (version) control systems
 Supporting collaboration Integrating ethics
 Conducting effective formative and summative assessment
 
+
+Goal of the ms:
+A lesson in reproducible analyses for phylogenetics and evolution, separate from package publication.
+
+Tutorials to include in ms (all?):
+SSB workshop use of DateLife and rotl
+Felipe’s python-opentree tutorial
+ropentree tutorials
+
+
+
 Goals of our tutorials:
-Create vetted and inclusive curricular materials
+Create vetted and inclusive curricular materials for reproducible phylogenetics and evolution.
+Challenges that we consider:
+Computational presence in the field of phylogenetics and evolution has increased considerably in the last 10 years.
+Computing is not a common skill or interest among biologists. Teaching computing to a diverse audience with varying preparation and computing skills is one of the challenges.
+
+A reproducible workflow for phylogenetics and evolution.
