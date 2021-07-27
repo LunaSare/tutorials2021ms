@@ -1,77 +1,84 @@
-submission
+**submission**<br>
 Journal of Statistics and Data Science Education
 
-Title
+**Title**<br>
 Promoting analysis reproducibility with accessibility: An example in phylogenetics.
 
-Authors
+**Authors**<br>
 Luna L Sanchez-Reyes and Emily Jane McTavish
 
-Goal of the ms:
+**Goal of the ms:**<br>
 A lesson in reproducible analyses and workflows for phylogenetics and evolution, separate from package publication.
 
 
-Outline
-Introduction - leading argument
-There are different arguments we can lead with:
-Poor data sharing practices are one of the main issues preventing scientific reproducibility.
-Reasons for prevalence of poor data sharing practices: lack of platforms and sharing standards, fear of being scooped, ...
-Accessibility is one of the key characteristics of reproducibility. Availability is not the same as accessibility.
-Programming is one of the main technologies facilitating reproducibility in science.
-Specifically, programming facilitates making analyses reproducible.
-Teaching programming skills to a diverse audience with varying preparation and computing knowledge is one of the challenges to address.
+**Outline**<br>
 
-Introduction - OpenTree
-In the natural sciences, considering evolutionary relationships among organisms (with phylogenetic trees) is key for studying and understanding biological processes.
-The Open Tree of Life (OpenTree) is a platform that standardizes sharing and storing of phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing all life.
-Data in OpenTree can be accessed programmatically through its many Application Programming Interface (API) services.
-R packages and Python libraries have been developed as wrappers for OpenTree API services for the benefit of a wider programming audience.
-The R and Python OpenTree wrappers have been used by researchers and educators to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research (CITE datelife, ...) and education (CITE phylotastic, galacticEdTools, ...).
+_Introduction - leading argument_
 
-Introduction - second argument
-Computational presence in the field of phylogenetics and evolution has increased considerably in the last 10 years.
-Yet, computing is not a common skill or interest among biologists and high-level programming language wrappers are still hard to be adopted by students and researchers with little computer science training, and sometimes even by biologists that have been programming for a long time.
-We identify that one of the main difficulties is the prevailing (probably necessary) use of expert programming lingo to document functions and software packages.
-Using accessible language to explain function usage, outputs, warnings and errors should improve accessibility of any software to facilitate adoption of software usage in general (CITE).
-“community-developed best practices and standards must play a central role in improving reproducibility” (Freedman LP, Cockburn IM, Simcoe TS (2015) The Economics of Reproducibility in Preclinical Research. PLoS Biol 13(6): e1002165. https://doi.org/10.1371/journal.pbio.1002165)
+- There are different arguments we can lead with:
+    1. Poor data sharing practices are one of the main issues preventing scientific reproducibility. Reasons for prevalence of poor data sharing practices: lack of platforms and sharing standards, fear of being scooped, ...
+    1. Accessibility is one of the key characteristics of reproducibility. Availability is not the same as accessibility.
+    1. Programming is one of the main technologies facilitating reproducibility in science. Specifically, programming facilitates making analyses reproducible. Teaching programming skills to a diverse audience with varying preparation and computing knowledge is one of the challenges to address.
 
-Introduction - goal
-We identify a set of accessible features (colorful and explained with “normal” language) and use them as guideline to develop teaching materials (tutorials, vignettes and notebooks)
-The teaching materials showcase reproducible workflows using the OpenTree resources (data and APIs) in phylogenetic analyses.
-The scientific data and tools that were available through the OpenTree platform are made more accessible to a wider audience through this teaching materials.
+_Introduction - OpenTree_
 
-Methods - How do we make R and Python function usage more accessible?
-Create documents that persist and are free of use and reuse, so they are available for the users to go back to them any time they need them, and to be passed on to other users.
-Use charismatic organisms to make examples
-Demonstrate errors
-Demonstrate warnings
-Help users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries)
-Give alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
+- In the natural sciences, considering evolutionary relationships among organisms (with phylogenetic trees) is key for studying and understanding biological processes.
+- The Open Tree of Life (OpenTree) is a platform that standardizes sharing and storing of phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing all life.
+- Data in OpenTree can be accessed programmatically through its many Application Programming Interface (API) services.
+- R packages and Python libraries have been developed as wrappers for OpenTree API services for the benefit of a wider programming audience.
+- The R and Python OpenTree wrappers have been used by researchers and educators to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research (CITE datelife, ...) and education (CITE phylotastic, galacticEdTools, ...).
 
-General goal of our tutorials:
-Create vetted and inclusive curricular materials for reproducible phylogenetic analyses, using the Open Tree of Life.
-vetted, a.k.a, tested by undergrads and researchers, and improved accordingly to feedback.
-inclusive, a.k.a., accessible to users with all levels of programming experience (and phylogenetics knowledge, too!)
+_Introduction - second argument_
 
-Examples from our tutorials:
-Which ones to include in ms? all?
-SSB workshop tutorials http://opentreeoflife.github.io/SSBworkshop/
-use of DateLife and rotl https://lunasare.github.io/ssb2020_workshop/
-use of python-opentree, bulk tnrs and GBIF https://github.com/snacktavish/OpenTree_SSB2020/tree/master/notebooks
-      2)  Felipe’s python-opentree tutorial
-      3)  ropentree vignettes https://github.com/McTavishLab/ropentree
-https://mctavishlab.github.io/ropentree/articles/plant_genera.html
-https://mctavishlab.github.io/ropentree/articles/nameset_tool.html
+- Computational presence in the field of phylogenetics and evolution has increased considerably in the last 10 years.
+- Yet, computing is not a common skill or interest among biologists and high-level programming language wrappers are still hard to be adopted by students and researchers with little computer science training, and sometimes even by biologists that have been programming for a long time.
+- We identify that one of the main difficulties is the prevailing (probably necessary) use of expert programming lingo to document functions and software packages.
+- Using accessible language to explain function usage, outputs, warnings and errors should improve accessibility of any software to facilitate adoption of software usage in general (CITE).
+- "community-developed best practices and standards must play a central role in improving reproducibility” (Freedman LP, Cockburn IM, Simcoe TS (2015) The Economics of Reproducibility in Preclinical Research. PLoS Biol 13(6): e1002165. https://doi.org/10.1371/journal.pbio.1002165)
 
+_Introduction - goal_
 
-Conclusion
-Making accessible reproducible workflows has several advantages:
-save explanation/training time when analyses are run again by students and collaborators.
-save research time for yourself when analyses are run again with more data, a different dataset, a different organism or biological model.
-scientific efforts can build off of each other
+- We identify a set of accessible features (colorful and explained with “normal” language) and use them as guideline to develop teaching materials (tutorials, vignettes and notebooks)
+- The teaching materials showcase reproducible workflows using the OpenTree resources (data and APIs) in phylogenetic analyses.
+- The scientific data and tools that were available through the OpenTree platform are made more accessible to a wider audience through this teaching materials.
+
+_Methods - How do we make R and Python function usage more accessible?_
+
+- Create documents that persist and are free of use and reuse, so they are available for the users to go back to them any time they need them, and to be passed on to other users.
+- Use charismatic organisms to make examples
+- Demonstrate errors
+- Demonstrate warnings
+- Help users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries)
+- Give alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
+
+_General goal of our tutorials:_
+
+- Create vetted and inclusive curricular materials for reproducible phylogenetic analyses, using the Open Tree of Life.
+- vetted, a.k.a, tested by undergrads and researchers, and improved accordingly to feedback.
+- inclusive, a.k.a., accessible to users with all levels of programming experience (and phylogenetics knowledge, too!)
+
+_Examples from our tutorials:_
+
+- Which ones to include in ms? all?
+    1) SSB workshop tutorials http://opentreeoflife.github.io/SSBworkshop/
+      - use of DateLife and rotl https://lunasare.github.io/ssb2020_workshop/
+      - use of python-opentree, bulk tnrs and GBIF https://github.com/snacktavish/OpenTree_SSB2020/tree/master/notebooks
+    2) Felipe’s python-opentree tutorial
+    3) ropentree vignettes https://github.com/McTavishLab/ropentree
+      - https://mctavishlab.github.io/ropentree/articles/plant_genera.html
+      - https://mctavishlab.github.io/ropentree/articles/nameset_tool.html
 
 
-Random thoughts and quotes:
+_Conclusion_
+
+- Making accessible reproducible workflows has several advantages:
+- save explanation/training time when analyses are run again by students and collaborators.
+- save research time for yourself when analyses are run again with more data, a different dataset, a different organism or biological model.
+- scientific efforts can build off of each other
+
+
+**Random thoughts and quotes:**
+
 Can research be reproducible without programming? yes, lol. But reproducibility is greatly facilitated by programming.
 
 ​​”Some factors that contribute to non-reproducible research are inappropriate study design, failure to adequately address biases, non-publication of studies with disappointing results, and insufficient descriptions of interventions and methods”
