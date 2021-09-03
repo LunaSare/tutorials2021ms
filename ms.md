@@ -61,7 +61,11 @@ We developed a set of tutorials for the Open Tree of Life package.
 We have received emails from senior researchers thanking us for this materials, and students have been able to engage using the packages with less hep from the PIs.
 
 
+## Discussion
 
+The technique to create tutorials described here facilitates aadoption of software and  analysis wokflows among researchers at different academic levels, from undergards to established researchers.
+
+Help closing the gap between students that had access to computational resources (and computational training) from an early age and students that did not. Late access to computational resources and training can be due to economic circumstances, ocurring often in households from underrepresented communities and minorites. It can also be due to parental and community pressure related to gender, where males are more often encouraged to do activities related to computers, while females are discouraged.
 
 
 
