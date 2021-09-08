@@ -22,15 +22,14 @@ We are using a backwards design strategy to write the ms.
 Scientific reproducibility, --the extent to which consistent results are obtained when an experiment is repeated (https://cure.web.unc.edu/defining-reproducibility/)-- is a key aspect for the advancement of Science (CITE).
 Reproducibility in the natural sciences has been historically low (https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124), which has raised concerns about a reproducibility crisis in the field (CITE). 
 
-Making available raw data from experiments, as well as computational code and documentation to reproduce the analysis is considered a key element to achieve reproducibility (https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2015.00827.x). Efforts to improve availability rates in the natural sciences have focused on cultural shifts towards data sharing, incentives, etc. 
-However, availability does not automatically imply accessibility (Box 1).
-Raw data, code and documentation can be made readily available through deposition in a public database or repository. However, even in this case, access can be limited to the general public. For example, there might be country or institution based restrictions to data download, data embargoes by the authors, or the repository might require a suscription to download the data.
-Conceptual, financial, language, etc., accessibility must be addressed too. 
+For research areas in which computation plays a significant role in deriving scientific findings, it is of particular importance to make available raw data from experiments, as well as computational code and documentation to achieve reproducibility (https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2015.00827.x). Efforts to improve reproducibility rates in computationally intensive areas of the natural sciences have focused on incentivizing a shift from normalized scientific sharing practices towards an increased availability of data, code and documentation. 
+Raw data, code and documentation can be made readily available through deposition in a public database or repository. However, even in this case, access can be limited in various ways. For example, the data and code might have been shared using a format that is not computer readable, hindering its reanalysis and reuse. Moreover, there might be country or institution based restrictions to data download, data embargoes by the authors, or the repository might require a suscription to download the data.
+Conceptual, financial, language, etc., accessibility must be addressed too. In sum, availability does not automatically imply accessibility (Box 1).
 
-In fields where computation plays a significant role in deriving the scientific findings, accessibility of code and documentation is of particular importance to achieve reproducibility.
+
 Primary documentation describes individual functions and general usage, sometimes accompanied with usage function examples.
 
-As opposed to code, primary documentation is written in natural language (i.e., English, Spanish, Chinese, any known human language) and makes use of highly specialized computational jargon (computationally specific concepts, words, and phrases) as well as formal language, which often slow down or even obstruct examination, application, and adoption of code by external individuals. 
+As opposed to code, primary documentation is written in natural language (i.e., any known human language, e.g., English, Spanish, Chinese) and usually makes use of highly specialized computational jargon (computationally specific concepts, words, and phrases) as well as formal language, which often slows down or even obstructs examination, application, and adoption of code by external individuals. 
 
 Because primary documentation is considered a professional document, acceptance of the research by the scientific community could be reduced if a more informal language is used.
 
@@ -38,13 +37,20 @@ Secondary types of documentation, such as vignettes and tutorials, demonstrating
 
 In this paper, we identify the necessity for secondary documentation that should be written down using language that is common to the target audience to facilitate examination, application, and adoption of code by the wider audience.
 
-We present a series of principles to generate tutorials that improve accessibility of code and documentation. We applied these principles to a series of tutorials and vignettes for th eOpen Tree of Life package.
+We present a set of principles to generate tutorials that improve accessibility of code and documentation. We applied these principles to a series of tutorials and vignettes for the Open Tree of Life package.
 
 ## Methods
 
 ### Principles
-To make documentation of packages more accesible, using the most common language is the best. Explaining computational terms that are needed at the beginning and also throught the text.
 
+- To make documentation of packages more accesible, using common (informal?) language is the best. Explaining computational terms that are needed at the beginning and also throught the text.
+- Create documents that persist and are free for use and reuse, so they are available for the users to go back to them any time they need them, and to be passed on to other users.
+- Use charismatic organisms to make examples
+- Demonstrate errors
+- Demonstrate warnings
+- Help users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries)
+- Give alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
+- 
 ## Results
 
 
@@ -67,6 +73,9 @@ It will also help closing the gap between students that had access to computatio
 
 How to balance software acceptance VS. adoption?
 These principles can be used to aide not only reproducibility, but also software adoption in the natural sciences.
+
+
+
 
 
 
