@@ -19,26 +19,22 @@ We are using a backwards design strategy to write the ms.
 
 ## Introduction
 
-Reproducibility, --the extent to which consistent results are obtained when a scientific experiment is repeated (https://cure.web.unc.edu/defining-reproducibility/)-- is a key aspect for the advancement of Science (CITE).
-Reproducibility rates in the natural sciences are low (https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124), which have prompted rising concerns about a reproducibility crisis in the field (CITE). Reproducibility is composed of many elements (availability, accesibility,... ). In this work, we focus on identifying and addressing factors that have affected negatively scientific accessibility in the natural sciences.
+Reproducibility --the extent to which consistent results are obtained when a scientific experiment is repeated (https://cure.web.unc.edu/defining-reproducibility/)--, is a key aspect for the advancement of Science, as it establishes reliability and generality of scientific results (CITE).
+Reproducibility rates in the natural sciences are low (https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124), prompting prevailing concerns about a reproducibility crisis in the field (CITE). The scientific community has united to incentivize cultural changes that will improve reproducibility rates long term, such as transparency and availability (CITE). 
 
-For research areas in which computation plays a significant role in deriving scientific findings, efforts have been largely focused on incentivizing a shift from normalized scientific sharing practices towards improving availability of raw data from experiments, the computational code used to manage and analyze the data, and the corresponding documentation for data and code, through deposition in a public database or repository (CITE). Availability of data, code and documentation is considered to be the key requirement for reproducibility by many (https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2015.00827.x).
+In this work, we argue that accesibility is an aspect that must accompany availability in order to achieve full reproducibility. We focus on identifying factors that have specifically affected accessibility in the natural sciences, and ways researchers can address it to ensure reproducibility of their workflows.
 
-However, scientific information available in public repositories can have limited access in various ways. For example, data and code might have been shared using formats that are not computer readable, hindering their reanalysis and reuse (for example, sharing a datatble as an image, instead of a txt file). Moreover, there might be country or institution based restrictions to data download, data embargoes by the authors, or the repository might require a suscription to download the data.
-Conceptual, financial, language, etc., accessibility must be addressed too. In sum, availability does not automatically imply accessibility (Box 1), and to achieve full reproducibility, availability must be accompanied by accessibility. 
+We use an example in the phylogenetics, a research area in the field of natural sciences that focuses on understanding of evolutionary relationships among organisms by inference of phylogenetic trees. Phylogenetics provides the basis to study and understand biological processes (CITE). Hence, improving reproducibility and availability of phylogenetic research is of great relevance (CITE).
+The Open Tree of Life project (OpenTree) has developed a platform to make available results from phylogenetic research, by standardizing and storing phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing all life (CITE).
+All data in OpenTree is open access and available programmatically through its many Application Programming Interface (API) services (CITE). 
+Additionally, R packages (CITE) and Python libraries (CITE) have been developed as wrappers for OpenTree API services to make them available to a wider programming audience.
+The R and Python OpenTree wrappers have been utilized by computer-literate individuals, to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research (CITE datelife, …) and education (CITE phylotastic, galacticEdTools, …). 
 
+The OpenTree project is proof that efforts to increase reproducibility and availability have also greatly increased computational knowledge and skill requirements in phylogenetics, and this might be true for all natural sciences.
 
-Phylogenetics is a field in the natural sciences that focus on understanding of evolutionary relationships among organisms by inference of phylogenetic trees, providing the basis to study and understand biological processes (CITE). Improving reproducibility and availability of phylogenetic research is of great importance for biological research (CITE).
+Computing is not a common skill nor main interest among biologists and naturalists. OpenTree's high-level programming language wrappers are still infrequently or not fully adopted by students and researchers with any level of programming knowledge, slowing down a wider adoption of reproducbile workflows in phylogenetics.
 
-The Open Tree of Life project (OpenTree) has developed a platform to standardize sharing and storing of results from phylogenetic research, with the goal of synthesizing a single phylogenetic tree encompassing all life (CITE).
-While all data in OpenTree can be accessed programmatically through its many Application Programming Interface (API) services (CITE), 
-R packages (CITE) and Python libraries (CITE) have been developed as wrappers for OpenTree API services for the benefit of a wider programming audience.
-The R and Python OpenTree wrappers have been utilized by computer-savvy individuals, to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research (CITE datelife, …) and education (CITE phylotastic, galacticEdTools, …). 
-
-Inherently, efforts to increase reproducibility and availability have also increased computational knowledge and skill requirements in all areas of research, and phylogenetics is no exception.
-
-Computing is not a common skill nor main interest among biologists, and OpenTree's high-level programming language wrappers are still infrequently or not fully adopted by students and researchers with any level of programming knowledge, slowing down a wider adoption of reproducbile workflows in phylogenetics.
-
+For research areas in which computation plays a significant role in deriving scientific findings, efforts have been largely focused on incentivizing a shift from normalized poor data sharing practices towards increasing availability of raw data from experiments, as well as the computational code used to manage and analyze the data, and the corresponding documentation for data and code, through deposition in a public database or repository (CITE). Increased availability of data, code and documentation is considered to be the key requirement for reproducibility by many (https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2015.00827.x).
 In this work we focus on improving accessibility of documentation.
 
 **_Link: Why focus on documentation?_**
@@ -53,7 +49,7 @@ Secondary types of documentation, such as vignettes and tutorials, demonstrate m
 
 In this paper, we identify the necessity for secondary documentation that is written down using language that is common to the target audience to facilitate examination, application, and adoption of code by the wider audience.
 
-We present a set of principles to generate tutorials that improve accessibility of code and documentation. We applied these principles to a series of tutorials and vignettes for the Open Tree of Life package.
+We present a set of principles to generate tutorials that improve accessibility of code and documentation. We applied these principles to a series of tutorials and vignettes for the OpenTree project.
 
 ## Methods
 
@@ -89,6 +85,9 @@ It will also help closing the gap between students that had access to computatio
 
 How to balance software acceptance VS. adoption?
 These principles can be used to aide not only reproducibility, but also software adoption in the natural sciences.
+
+
+
 
 
 
