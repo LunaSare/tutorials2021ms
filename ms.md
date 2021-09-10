@@ -19,19 +19,19 @@ We are using a backwards design strategy to write the ms.
 
 ## Introduction
 
-Reproducibility --the extent to which consistent results are obtained when a scientific experiment is repeated [@repdef]--, is a key aspect for the advancement of Science, as it constitutes a minimum standard to understand scientific results, determine their reliability and generality, and eventually build more scientific knowledge upon them  [@king1995replication; @peng2011reproducible; @powers2019open].
-Reproducibility rates in the natural sciences are low [@], prompting prevailing concerns about a reproducibility crisis in the field that is multifactorial and multidimensional [@ioannidis2005most; @baker2016reproducibility]. The scientific community has united to incentivize cultural changes that will improve reproducibility rates long term, such as transparency, availability, and workflow automatization, to name a few [@]. 
-In this work, we argue that accesibility is an aspect that must accompany availability in order to achieve full workflow automatization and reproducibility. We focus on identifying factors that have specifically affected accessibility in the natural sciences, and ways researchers can address it to ensure reproducible and automatic workflows.
+Reproducibility --the extent to which consistent results are obtained when a scientific experiment is repeated [@repdef2021]-- is a key aspect for the advancement of Science, as it constitutes a minimum standard to understand scientific results, determine their reliability and generality, and eventually build more scientific knowledge upon them  [@king1995replication; @peng2011reproducible; @powers2019open].
+Reproducibility rates in the natural sciences are low [@], prompting prevailing concerns about a reproducibility crisis in the field that is multifactorial and multidimensional [@ioannidis2005most; @baker2016reproducibility]. The scientific community has united to incentivize cultural changes that will improve reproducibility rates long term, such as transparency, availability, and workflow automatization, to name a few [@peng2015reproducibility]. 
+In this work, we argue that accesibility is an aspect that must accompany availability (Box 1) in order to achieve full workflow automatization and reproducibility. We focus on identifying factors that have specifically affected accessibility in the natural sciences, and ways researchers can address it to ensure reproducible and automatic workflows.
 
 We use an example in the phylogenetics, a research area in the field of natural sciences that focuses on understanding evolutionary relationships among organisms by inference of phylogenetic trees. Phylogenetics provides the basis to study and understand biological processes [@dobzhansky1973nothing]. Hence, improving reproducibility and availability of phylogenetic research is of great relevance for biological research.
-The Open Tree of Life project (OpenTree) has developed a platform to make available results from phylogenetic research, by standardizing and storing phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing all life [@opentreeoflife2019synth].
+The Open Tree of Life project (OpenTree) has developed a platform that facilitates availability of results from phylogenetic research, by standardizing and storing phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing all life [@opentreeoflife2019synth].
 All data in OpenTree is open access and available programmatically through its many Application Programming Interface (API) services [@opentreeAPIs]. 
 Additionally, R packages [@michonneau2016rotl] and Python libraries [@mctavish2021opentree] have been developed as wrappers for OpenTree API services to make them available to a wider programming audience.
-The R and Python OpenTree wrappers have been utilized by computer-literate individuals, to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research [@sanchez2019datelife] and education (CITE phylotastic, galacticEdTools, …). 
+The R and Python OpenTree wrappers have been utilized by computer-literate individuals, to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research [@sanchez2019datelife] and education [@nguyen2020phylotastic; @phylotasticedtools; @galacticedtools]. 
 
-The OpenTree project is proof that efforts to increase reproducibility and availability have also greatly increased computational knowledge and skill requirements in phylogenetics, and this might be true for all natural sciences.
-Computing is not a common skill nor main interest among biologists and naturalists. OpenTree's high-level programming language wrappers are still infrequently or not fully adopted by students and researchers with any level of programming knowledge, slowing down a wider adoption of reproducbile workflows in phylogenetics.
-For research areas in which computation plays a significant role in deriving scientific findings, efforts have been largely focused on incentivizing a shift from normalized poor data sharing practices towards increasing availability of raw data from experiments, as well as the computational code used to manage and analyze the data, and the corresponding documentation for data and code, through deposition in a public database or repository (CITE). Increased availability of data, code and documentation is considered to be a key requirement for reproducibility by many (https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2015.00827.x).
+The OpenTree project is proof that efforts to increase reproducibility and availability have also greatly increased baseline required computational knowledge and skills in phylogenetic research, and this might be true for all natural sciences.
+Computing is not a common skill nor main interest among biologists and naturalists. OpenTree's high-level programming language wrappers are still infrequently or not fully adopted by students and researchers with any level of programming knowledge (EXAMPLE), probably slowing down a wider adoption of reproducbile workflows in phylogenetics.
+For research areas in which computation plays a significant role in deriving scientific findings, efforts have been largely focused on incentivizing a shift from normalized poor data sharing practices towards increasing availability of raw data from experiments, as well as the computational code used to manage and analyze the data, and the corresponding documentation for data and code, through deposition in a public database or repository [@peng2011reproducible; @sandve2013ten; @powers2019open]. Increased availability of data, code and documentation is considered to be a key requirement for reproducibility by many [@peng2015reproducibility].
 (Argument link needed here (?): Why focus on documentation next?)
 In this work we focus on improving accessibility of documentation. In particular, we identify the necessity for documentation that is written down using language that is common to the target audience to facilitate examination, application, and adoption of code by the wider audience.
 
@@ -82,15 +82,15 @@ We vetted the tutorials with an audience on a workshop as well as individual use
 
 ## Results
 
+SSB workshop tutorials http://opentreeoflife.github.io/SSBworkshop/ - use of DateLife and rotl https://lunasare.github.io/ssb2020_workshop/ - use of python-opentree, bulk tnrs and GBIF https://github.com/snacktavish/OpenTree_SSB2020/tree/master/notebooks
+Felipe’s python-opentree tutorial
+ropentree vignettes https://github.com/McTavishLab/ropentree - https://mctavishlab.github.io/ropentree/articles/plant_genera.html - https://mctavishlab.github.io/ropentree/articles/nameset_tool.html
+
 We explain the warnings and errors and design ways to avoid them, and detect them beforehand (i.e., before using an input that would give an error). We explain the consequences of warnings.
 
 We designed ways to access the different elements of the outputs.
 
 We have received emails from senior researchers thanking us for this materials, and students have been able to engage using the packages with less hep from the PIs.
-
-### Box 1
-Availability does not imply accessibility. One example I really like is the marshmallows in an office. The marshmallow bags were there, availabe for anyone to eat them. But until someone opened the bag and put the marshmallows in a tray or container, people started eating them. Maybe it was something psychological in this case. But the point is that simply sharing your code and documenting it might not be enough for the average researcher to reproduce, they'll be able to figure it out, but the time needed to do so might not be worthy for them, or might not be something they can invest in, even if it would be useful for them long term, the short term investment is too intense.
-Let alone students that are just starting, it is even more difficult for them.
 
 ## Discussion
 
@@ -104,20 +104,17 @@ These principles can be used to aide not only reproducibility, but also software
 Discuss: why address accessibility and not other apects of reproducibility?
 
 
+## Conclusion
+
+Making accessible reproducible workflows has several advantages:
+
+save explanation/training time when analyses are run again by students and collaborators.
+
+save research time for yourself when analyses are run again with more data, a different dataset, a different organism or biological model.
+
+scientific efforts can build off of each other
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Box 1
+Availability does not imply accessibility. One example I really like is the marshmallows in an office. The marshmallow bags were there, availabe for anyone to eat them. But until someone opened the bag and put the marshmallows in a tray or container, people started eating them. Maybe it was something psychological in this case. But the point is that simply sharing your code and documenting it might not be enough for the average researcher to reproduce, they'll be able to figure it out, but the time needed to do so might not be worthy for them, or might not be something they can invest in, even if it would be useful for them long term, the short term investment is too intense.
+Let alone students that are just starting, it is even more difficult for them.
