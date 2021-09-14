@@ -52,39 +52,43 @@ Secondary types of documentation, such as vignettes and tutorials, demonstrate a
 
 ### Adressing hurdles to accesibility: the principles
 
-We examined the R and python wrapper packages of OpenTree APIs. 
+#### 1. Demonstrate integration of function usage
 
-We designed a workflow usage that would require as many functions as possible.
+We examined primary documentation from the R wrapper package `rotl`.  of OpenTree APIs. 
 
-Instead of focusing on examples that work without errors, we identify inputs that would give a wide range of warnings and errors.
+We designed a workflow usage that would visit as many functions as possible, by answering to packe uses that are most commonly requested by users.
+
+#### 2. Demonstrate errors and warnings
+
+Instead of focusing on examples that work without errors, we identify inputs that would give a wide range of warnings and errors, focusing on demonstrating these cases. This helps users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries)
 
 We identify effects of warnings and errors downstream of the workflow.
 
-We identify ways to evaluate inputs to know if they will produce an error.
+We identify ways to evaluate inputs to know if they will produce an error, and design alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
 
-We read the documentation and focused on concepts that were assumed or were not explained in depth.
+#### 3. Avoid jargon and expert language. 
 
-We created the tutorials using informal language.
+We focused on complementing the primary documentation by identifying computational concepts that were assumed or were not explained in depth.
 
-We published the tutorials on a public, free license and free of cost repository and persistent website.
+We wrote the tutorials using informal language, explaining computational terms that are key for the workflow both at the beginning and throught the text.
 
-We created versions of the tutorials.
+We vetted the tutorials with an audience on workshops as well as individual users.
 
-We vetted the tutorials with an audience on a workshop as well as individual users.
+We choose examples that are charismatic for the audience.
 
-- To make documentation of packages more accesible, using common (informal?) language is the best. Explaining computational terms that are needed at the beginning and also throught the text.
-- Create documents that persist and are free for use and reuse, so they are available for the users to go back to them any time they need them, and to be passed on to other users.
-- Use charismatic organisms to make examples
-- Demonstrate errors
-- Demonstrate warnings
-- Help users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries)
-- Give alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
+#### 4. Make it stable through time.
+
+We published the tutorials on a public, free license, free of cost, and free for use and reuse repository and persistent website.
+The tutorial is available for the users to go back to it any time they need it, and to be passed on to other users.
+
+Following the carpentries [@CITE], we created a main version of the tutorial that is updated. Versions presented on workshops are a copy from the original repository, and represent a stable and temporal snapshot of the functions and workflows presented in the tutorial.
+
+
+
 
 ## Results
 
-SSB workshop tutorials http://opentreeoflife.github.io/SSBworkshop/ - use of DateLife and rotl https://lunasare.github.io/ssb2020_workshop/ - use of python-opentree, bulk tnrs and GBIF https://github.com/snacktavish/OpenTree_SSB2020/tree/master/notebooks
-Felipe’s python-opentree tutorial
-ropentree vignettes https://github.com/McTavishLab/ropentree - https://mctavishlab.github.io/ropentree/articles/plant_genera.html - https://mctavishlab.github.io/ropentree/articles/nameset_tool.html
+SSB workshop tutorials http://opentreeoflife.github.io/SSBworkshop/ - use of DateLife and rotl https://lunasare.github.io/ssb2020_workshop/ 
 
 We explain the warnings and errors and design ways to avoid them, and detect them beforehand (i.e., before using an input that would give an error). We explain the consequences of warnings.
 
@@ -118,3 +122,5 @@ scientific efforts can build off of each other
 ### Box 1
 Availability does not imply accessibility. One example I really like is the marshmallows in an office. The marshmallow bags were there, availabe for anyone to eat them. But until someone opened the bag and put the marshmallows in a tray or container, people started eating them. Maybe it was something psychological in this case. But the point is that simply sharing your code and documenting it might not be enough for the average researcher to reproduce, they'll be able to figure it out, but the time needed to do so might not be worthy for them, or might not be something they can invest in, even if it would be useful for them long term, the short term investment is too intense.
 Let alone students that are just starting, it is even more difficult for them.
+
+## References
