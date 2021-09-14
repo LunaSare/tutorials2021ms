@@ -54,15 +54,15 @@ Secondary types of documentation, such as vignettes and tutorials, demonstrate a
 
 #### 1. Demonstrate integration of function usage
 
-We examined primary documentation from the R wrapper package `rotl`.  of OpenTree APIs. 
+We examined primary documentation from the OpenTree API R wrapper package `rotl`. 
 
-We designed a workflow usage that would visit as many functions as possible, by answering to packe uses that are most commonly requested by users.
+We designed a workflow that visits as many functions as possible, while answering to uses that are most commonly requested by users of OpenTree.
 
-#### 2. Demonstrate errors and warnings
+#### 2. Demonstrate errors and warnings thoroughly
 
-Instead of focusing on examples that work without errors, we identify inputs that would give a wide range of warnings and errors, focusing on demonstrating these cases. This helps users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries)
+Primary documentation focuses on demonstrating usage function with examples that work seamlessly without errors. We argue that the opposite is needed to support user adoption of reproducibile workflows: demonstrate examples that do not work as expected and exemplify ways to address them. We identify inputs that would give a wide range of warnings and errors, focusing on demonstrating these cases. This helps users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries).
 
-We identify effects of warnings and errors downstream of the workflow.
+We also identify effects of warnings and errors downstream of the workflow.
 
 We identify ways to evaluate inputs to know if they will produce an error, and design alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
 
@@ -83,7 +83,9 @@ The tutorial is available for the users to go back to it any time they need it, 
 
 Following the carpentries [@CITE], we created a main version of the tutorial that is updated. Versions presented on workshops are a copy from the original repository, and represent a stable and temporal snapshot of the functions and workflows presented in the tutorial.
 
+#### 5. The (now) classics of computational reproducibility
 
+Provide all information on package version and system capabilities.
 
 
 ## Results
