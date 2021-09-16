@@ -13,36 +13,27 @@ Promoting analysis reproducibility with accessibility: An example in evolutionar
 Luna L Sanchez-Reyes and Emily Jane McTavish
 
 **Goal of the ms:**<br>
-A lesson in reproducible analyses and workflows for evolutionary biology, separate from software package publication.
+A lesson in reproducible analyses and workflows for phylogenetics and evolution, separate from software package publication.
 
-We are using a backwards design strategy to write the ms. (?)
+We are using a backwards design strategy to write the ms.
 
 ## Introduction
 
-Reproducibility --the extent to which consistent results are obtained when a scientific experiment is repeated [@repdef2021]-- is a key aspect for the advancement of science, as it constitutes a minimum standard to understand scientific results, to determine their reliability and generality, and eventually to build more scientific knowledge upon those results  [@king1995replication; @peng2011reproducible; @powers2019open].
-Reproducibility rates in the natural sciences are low [@ioannidis2005most; @prinz2011believe], prompting concerns about a reproducibility crisis in the field [@baker2016reproducibility]. The scientific community has united to incentivize cultural changes that will improve reproducibility rates long term, such as transparency, availability, and workflow automatization, to name a few [@peng2015reproducibility].
-We argue that accesibility is a key aspect that must accompany availability (Box 1) in order to achieve full workflow automatization and reproducibility. We focus on identifying factors that have specifically affected accessibility in the natural sciences, and ways researchers can address it to ensure reproducible and automatic workflows.
-> [name=Emily Jane McTavish] maybe define accessibility?
+Reproducibility --the extent to which consistent results are obtained when a scientific experiment is repeated [@repdef2021]-- is a key aspect for the advancement of Science, as it constitutes a minimum standard to understand scientific results, determine their reliability and generality, and eventually build more scientific knowledge upon them  [@king1995replication; @peng2011reproducible; @powers2019open].
+Reproducibility rates in the natural sciences are low [@], prompting prevailing concerns about a reproducibility crisis in the field that is multifactorial and multidimensional [@ioannidis2005most; @baker2016reproducibility]. The scientific community has united to incentivize cultural changes that will improve reproducibility rates long term, such as transparency, availability, and workflow automatization, to name a few [@peng2015reproducibility].
+In this work, we argue that accesibility is an aspect that must accompany availability (Box 1) in order to achieve full workflow automatization and reproducibility. We focus on identifying factors that have specifically affected accessibility in the natural sciences, and ways researchers can address it to ensure reproducible and automatic workflows.
 
-We use an example in evolutionary biology. This example focuses on understanding the shared ancestry among organisms through evolutionary trees. These phylogenetic trees provide the basis to study and understand biological processes [@dobzhansky1973nothing]. Hence, improving reproducibility and availability of phylogenetic research is relevant for many aspects of biological research.
+We use an example in the phylogenetics, a research area in the field of natural sciences that focuses on understanding evolutionary relationships among organisms by inference of phylogenetic trees. Phylogenetics provides the basis to study and understand biological processes [@dobzhansky1973nothing]. Hence, improving reproducibility and availability of phylogenetic research is of great relevance for biological research.
 The Open Tree of Life project (OpenTree) has developed a platform that facilitates availability of results from phylogenetic research, by standardizing and storing phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing all life [@opentreeoflife2019synth].
 All data in OpenTree is open access and available programmatically through its many Application Programming Interface (API) services [@opentreeAPIs].
 Additionally, R packages [@michonneau2016rotl] and Python libraries [@mctavish2021opentree] have been developed as wrappers for OpenTree API services to make them available to a wider programming audience.
 The R and Python OpenTree wrappers have been utilized by computer-literate individuals, to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research [@sanchez2019datelife] and education [@nguyen2020phylotastic; @phylotasticedtools; @galacticedtools].
 
-The OpenTree project demonstrates that efforts to increase reproducibility and availability have also increased the baseline required computational knowledge and skills in phylogenetic research.
-These computational skills requirements are likely increasing across all natural sciences.
-Computing is not traditionally a core skill taught to biologists and naturalists.
-However, many students are now being trained in R as a statistics and data analysis environment.
-> []cite?
-
-In order for reproducible computational tools to be adopted for research, they much be accessible to reseachers.
-Data and code availability is a core requirement for reproducibility research [@peng2011reproducible; @sandve2013ten; @powers2019open].
-However, the utility of data resources is limited by the technical challenges of accessing the data.
-In order to motivate reproducible research, that gap needs to be bridged.
+The OpenTree project is proof that efforts to increase reproducibility and availability have also greatly increased baseline required computational knowledge and skills in phylogenetic research, and this might be true for all natural sciences.
+Computing is not a common skill nor main interest among biologists and naturalists. OpenTree's high-level programming language wrappers are still infrequently or not fully adopted by students and researchers with any level of programming knowledge (EXAMPLE), probably slowing down a wider adoption of reproducbile workflows in phylogenetics.
+For research areas in which computation plays a significant role in deriving scientific findings, efforts have been largely focused on incentivizing a shift from normalized poor data sharing practices towards increasing availability of raw data from experiments, as well as the computational code used to manage and analyze the data, and the corresponding documentation for data and code, through deposition in a public database or repository [@peng2011reproducible; @sandve2013ten; @powers2019open]. Increased availability of data, code and documentation is considered to be a key requirement for reproducibility by many [@peng2015reproducibility].
 (Argument link needed here (?): Why focus on documentation next?)
-In this work we focus on improving accessibility of code examples and documentation.
-In particular, we identify the necessity for documentation that is written down using language that is common to the target audience to facilitate examination, application, and adoption of code by the wider audience.
+In this work we focus on improving accessibility of documentation. In particular, we identify the necessity for documentation that is written down using language that is common to the target audience to facilitate examination, application, and adoption of code by the wider audience.
 
 We present a set of principles to generate documentation that improves accessibility of code and documentation. We applied these principles to a series of tutorials and vignettes for the OpenTree project.
 
@@ -61,14 +52,11 @@ Secondary types of documentation, such as vignettes and tutorials, demonstrate a
 
 ### Adressing hurdles to accesibility: the principles
 
-#### 1. Demonstrate integration of function usage with motivating examples
+#### 1. Demonstrate integration of function usage
 
 We examined primary documentation from the OpenTree API R wrapper package `rotl`.
 
 We designed a workflow that visits as many functions as possible, while answering to uses that are most commonly requested by users of OpenTree.
-By framing the use cases in highly requested tasks, the documenation follows a narrative conceptual arc, making the translation to biological use cases clear.
-
-> [name=Emily Jane McTavish]Brief para or figure on what the motivating example is here
 
 #### 2. Demonstrate errors and warnings thoroughly
 
@@ -77,11 +65,7 @@ Primary documentation focuses on demonstrating usage function with examples that
 We also identify effects of warnings and errors downstream of the workflow.
 
 We identify ways to evaluate inputs to know if they will produce an error, and design alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
-One of the most essential skills in programming is interpreting and moving forward from errors.
-Many finely honed tutorials do not trigger errors, which preculdes helping studnts to develop the tools to understand and address errors when the do encounter them, as they inevitably will!
 
-> [name=Emily Jane McTavish]Show where you deal with an error in your tutorial
->
 #### 3. Avoid jargon and expert language.
 
 We focused on complementing the primary documentation by identifying computational concepts that were assumed or were not explained in depth.
@@ -92,8 +76,6 @@ We vetted the tutorials with an audience on workshops as well as individual user
 
 We choose examples that are charismatic for the audience.
 
-> [name=Emily Jane McTavish]Specify what one you used!
->
 #### 4. Make it stable through time.
 
 We published the tutorials on a public, free license, free of cost, and free for use and reuse repository and persistent website.
@@ -101,14 +83,10 @@ The tutorial is available for the users to go back to it any time they need it, 
 
 Following the carpentries [@CITE], we created a main version of the tutorial that is updated. Versions presented on workshops are a copy from the original repository, and represent a stable and temporal snapshot of the functions and workflows presented in the tutorial.
 
-> [name=Emily Jane McTavish] Show the page, or the layout, or something :P
-
-
 #### 5. The (now) classics of computational reproducibility
 
 Provide all information on package version and system capabilities.
 
-> [name=Emily Jane McTavish]link to where/and how you did that
 
 ## Results
 
