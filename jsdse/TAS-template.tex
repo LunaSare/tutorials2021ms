@@ -1,10 +1,12 @@
 %&latex
 \documentclass[12pt]{article}
-\usepackage{amsmath}
+\usepackage{amsthm,amsmath}
 \usepackage{graphicx,psfrag,epsf}
 \usepackage{enumerate}
 \usepackage{natbib}
-\usepackage{url} % not crucial - just used below for the URL 
+\usepackage{url} % not crucial - just used below for the URL
+\usepackage{amsthm,amsmath}
+\usepackage[utf8]{inputenc}
 
 %\pdfminorversion=4
 % NOTE: To produce blinded version, replace "0" with "1" below.
@@ -30,13 +32,13 @@
 
 \if0\blind
 {
-  \title{\bf Title}
-  \author{Author 1\thanks{
-    The authors gratefully acknowledge \textit{please remember to list all relevant funding sources in the unblinded version}}\hspace{.2cm}\\
-    Department of YYY, University of XXX\\
+  \title{\bf Promoting analysis reproducibility with accessibility: An example in evolutionary biology}
+  \author{Luna L. Sanchez Reyes\thanks{
+    The authors gratefully acknowledge "Sustaining the Open Tree of Life", NSF ABI No. 1759838, and ABI No. 1759846.}\hspace{.2cm}\\
+    School of Natural Sciences, University of California, Merced\\
     and \\
-    Author 2 \\
-    Department of ZZZ, University of WWW}
+    Emily Jane McTavish \\
+    School of Natural Sciences, University of California, Merced}
   \maketitle
 } \fi
 
@@ -46,7 +48,7 @@
   \bigskip
   \bigskip
   \begin{center}
-    {\LARGE\bf Title}
+    {\LARGE\bf Promoting analysis reproducibility with accessibility: An example in evolutionary biology}
 \end{center}
   \medskip
 } \fi
@@ -57,7 +59,7 @@ The text of your abstract.  200 or fewer words.
 \end{abstract}
 
 \noindent%
-{\it Keywords:}  3 to 6 keywords, that do not appear in the title
+{\it Keywords:}  open science, education, R, phylogenetics, tutorials
 \vfill
 
 \newpage
@@ -65,183 +67,140 @@ The text of your abstract.  200 or fewer words.
 \section{Introduction}
 \label{sec:intro}
 
-Body of paper.  Margins in this document are roughly 0.75 inches all
-around, letter size paper.
+Reproducibility --the extent to which consistent results are obtained when a scientific experiment is repeated (\cite{repdef2021})-- is a key aspect for the advancement of science, as it constitutes a minimum standard to understand scientific results, to determine their reliability and generality, and eventually to build more scientific knowledge upon those results (\cite{king1995replication, peng2011reproducible, powers2019open}).
+Reproducibility rates in the natural sciences are low (\cite{ioannidis2005most, prinz2011believe}), prompting concerns about a reproducibility crisis in the field (\cite{baker2016reproducibility}). The scientific community has united to incentivize cultural changes that will improve reproducibility rates long term, such as transparency, availability, and workflow automatization, to name a few (\cite{peng2015reproducibility}).
+We argue that accesibility is a key aspect that must accompany availability (Box 1) in order to achieve full workflow automatization and reproducibility.
+
+\bigskip
+\bigskip
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+    \textbf{Box 1.}
+      Availability does not imply accessibility. One example we really like is the
+      marshmallows in an office story.
+      The marshmallow bags were there, availabe for anyone in the office to eat
+      the marshmallows inside. But the marshmallows stayed there for days, weeks even.
+      And it was not until someone opened the bag and put the marshmallows in a tray,
+      that people started actually eating them. They were gone in a matter of hours.
+      Code is not marshmallows. But the point is that by
+      sharing your code and documenting it might not be enough for the general researcher
+      to reproduce results. Researchers will certainly be able to eventually figure it out,
+      but the time needed
+      to do so might not be worthy for them, or might not be something they can invest
+      in, even if it would be useful for them long term, the short term investment
+      is too intense.
+    }%
+}
+\bigskip
+
+We focus on identifying factors that have specifically affected accessibility in the natural sciences, and ways researchers can address it to ensure reproducible and automatic workflows.
+We use an example in evolutionary biology. This example focuses on understanding the shared ancestry among organisms through evolutionary trees. These phylogenetic trees provide the basis to study and understand biological processes (\cite{dobzhansky1973nothing}). Hence, improving reproducibility and availability of phylogenetic research is relevant for many aspects of biological research.
+The Open Tree of Life project (OpenTree) has developed a platform that facilitates availability of results from phylogenetic research, by standardizing and storing phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing all life (\cite{opentreeoflife2019synth}).
+All data in OpenTree is open access and available programmatically through its many Application Programming Interface (API) services (\cite{opentreeAPIs}).
+Additionally, R packages (\cite{michonneau2016rotl}) and Python libraries (\cite{mctavish2021opentree}) have been developed as wrappers for OpenTree API services to make them available to a wider programming audience.
+The R and Python OpenTree wrappers have been utilized by computer-literate individuals, to seamlessly establish reproducible workflows to use and reuse expert phylogenetic knowledge for biological research (\cite{sanchez2019datelife}) and education (\cite{nguyen2020phylotastic, phylotasticedtools, galacticedtools}).
+
+The OpenTree project demonstrates that efforts to increase reproducibility and availability have also increased the baseline required computational knowledge and skills in phylogenetic research.
+These computational skills requirements are likely increasing across all natural sciences.
+Computing is not traditionally a core skill taught to biologists and naturalists.
+However, many students are now being trained in R as a statistics and data analysis environment.
+In order for reproducible computational tools to be adopted for research, they much be accessible to reseachers.
+Data and code availability is a core requirement for reproducibility research (\cite{peng2011reproducible, sandve2013ten, powers2019open}).
+However, the utility of data resources is limited by the technical challenges of accessing the data.
+In order to motivate reproducible research, that gap needs to be bridged.
+In this work we focus on improving accessibility of code examples and documentation.
+In particular, we identify the necessity for documentation that is written down using language that is common to the target audience to facilitate examination, application, and adoption of code by the wider audience.
+
+We present a set of principles to generate documentation that improves accessibility of code and documentation. We applied these principles to a series of tutorials and vignettes for the OpenTree project.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=3in]{fig1.pdf}
 \end{center}
-\caption{Consistency comparison in fitting surrogate model in the tidal
-power example. \label{fig:first}}
+\caption{Principle 1. \label{fig:first}}
 \end{figure}
 
-\begin{table}
-\caption{D-optimality values for design $X$ under five different scenarios.  \label{tab:tabone}}
-\begin{center}
-\begin{tabular}{rrrrr}
-one & two & three & four & five\\\hline
-1.23 & 3.45 & 5.00 & 1.21 & 3.41 \\
-1.23 & 3.45 & 5.00 & 1.21 & 3.42 \\
-1.23 & 3.45 & 5.00 & 1.21 & 3.43 \\
-\end{tabular}
-\end{center}
-\end{table}
 
-\begin{itemize}
-\item Note that figures and tables (such as Figure~\ref{fig:first} and
-Table~\ref{tab:tabone}) should appear in the paper, not at the end or
-in separate files.
-\item In the latex source, near the top of the file the command
-\verb+\newcommand{\blind}{1}+ can be used to hide the authors and
-acknowledgements, producing the required blinded version.
-\item Remember that in the blind version, you should not identify authors
-indirectly in the text.  That is, don't say ``In Smith et. al.  (2009) we
-showed that ...''.  Instead, say ``Smith et. al. (2009) showed that ...''.
-\item These points are only intended to remind you of some requirements.
-Please refer to the instructions for authors
-at \url{http://amstat.tandfonline.com/action/authorSubmission?journalCode=utas20&page=instructions#.VFkojfnF_0c}
-\item For more about ASA\ style, please see \url{http://journals.taylorandfrancis.com/amstat/asa-style-guide/}
-\item If you have supplementary material (e.g., software, data, technical
-proofs), identify them in the section below.  In early stages of the
-submission process, you may be unsure what to include as supplementary
-material.  Don't worry---this is something that can be worked out at later stages.
-\end{itemize}
 
 \section{Methods}
 \label{sec:meth}
-Don't take any of these section titles seriously.  They're just for
-illustration.
+\subsection*{Identifying hurdles to accesibility}
 
-\section{Verifications}
-\label{sec:verify}
-This section will be just long enough to illustrate what a full page of
-text looks like, for margins and spacing.
+Good primary documentation for code describes general usage of individual functions, the components and variables a function can take, and it should be accompanied with function usage examples on how to apply it.
+As opposed to code, primary documentation is written in natural language (i.e., any known human language, e.g., English, Spanish, Chinese) and usually makes use of highly specialized computational jargon (computationally specific concepts, words, and phrases) as well as formal language, which often slows down or even obstructs examination, application, and adoption of code by external individuals.
+Because primary documentation is considered a professional document, acceptance of the research by the scientific community could be reduced if a more informal language is used.
+Secondary types of documentation, such as vignettes and tutorials, demonstrate additional cases of individual function usage, and describe analysis workflows in more detail, as well as function associations to generate a specific analysis and results. While secondary documentation has become more common practice, it is still often generated using highly specialized language.
+
+\subsection*{Adressing hurdles to accesibility: the principles}
+
+\subsubsection*{1. Demonstrate integration of function usage with motivating examples}
+
+We examined primary documentation from the OpenTree API R wrapper package `rotl`.
+
+We designed a workflow that visits as many functions as possible, while answering to uses that are most commonly requested by users of OpenTree.
+By framing the use cases in highly requested tasks, the documenation follows a narrative conceptual arc, making the translation to biological use cases clear.
+
+> [name=Emily Jane McTavish]Brief para or figure on what the motivating example is here
+
+\subsubsection*{2. Demonstrate errors and warnings thoroughly}
+
+Primary documentation focuses on demonstrating usage function with examples that work seamlessly without errors. We argue that the opposite is needed to support user adoption of reproducibile workflows: demonstrate examples that do not work as expected and exemplify ways to address them. We identify inputs that would give a wide range of warnings and errors, focusing on demonstrating these cases. This helps users to not be afraid of errors and warnings, but instead to use them to their advantage (CITE carpentries).
+We also identify effects of warnings and errors downstream of the workflow.
+
+We identify ways to evaluate inputs to know if they will produce an error, and design alternatives on what to do when faced with an error or warning, and demonstrate these alternatives.
+One of the most essential skills in programming is interpreting and moving forward from errors.
+Many finely honed tutorials do not trigger errors, which preculdes helping studnts to develop the tools to understand and address errors when the do encounter them, as they inevitably will!
+
+> [name=Emily Jane McTavish]Show where you deal with an error in your tutorial
+
+\subsubsection*{3. Avoid jargon and expert language}
+
+We focused on complementing the primary documentation by identifying computational concepts that were assumed or were not explained in depth.
+We vetted the tutorials with an audience on workshops as well as individual user
+
+We choose examples that are charismatic for the audience.
+
+> [name=Emily Jane McTavish]Specify what one you used!
 
 
-\cite{Campbell02}, \cite{Schubert13}, \cite{Chi81}
+\subsubsection*{4. Make it stable through time}
+
+We published the tutorials on a public, free license, free of cost, and free for use and reuse repository and persistent website.
+The tutorial is available for the users to go back to it any time they need it, and to be passed on to other users.
+
+Following the carpentries [@CITE], we created a main version of the tutorial that is updated. Versions presented on workshops are a copy from the original repository, and represent a stable and temporal snapshot of the functions and workflows presented in the tutorial.
+
+> [name=Emily Jane McTavish] Show the page, or the layout, or something :P
 
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-{\bf With this spacing we have 30 lines per page.}
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
+\subsubsection*{5. The (now) classics of computational reproducibility}
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
+Provide all information on package version and system capabilities.
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
+> [name=Emily Jane McTavish]link to where/and how you did that
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
+\section{Results and Discussion}
+\label{sec:results}
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
+We explain the warnings and errors and design ways to avoid them, and detect them beforehand (i.e., before using an input that would give an error). We explain the consequences of warnings.
+We designed ways to access the different elements of the outputs.
+We have received emails from senior researchers thanking us for this materials, and students have been able to engage using the packages with less hep from the PIs.
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-
+The principles to create tutorials described here facilitate adoption of software and analysis wokflows among researchers at different academic levels, from undergrads to established researchers.
+It will also help closing the gap between students that had access to computational resources (and computational training) from an early age and students that did not. Late access to computational resources and training can occur due to lack of economic resources, often ocurring in households from underrepresented communities and minorites. It can also be due to gender-biased parental and community pressures, in which males are more often encouraged to perform activities related to computers, while females are discouraged.
+How to balance software acceptance VS. adoption?
+These principles can be used to aide not only reproducibility, but also software adoption in the natural sciences.
+Discuss: why address accessibility and not other apects of reproducibility?
 
 
 \section{Conclusion}
 \label{sec:conc}
 
+Making accessible reproducible workflows has several advantages:
+save explanation/training time when analyses are run again by students and collaborators.
+save research time for yourself when analyses are run again with more data, a different dataset, a different organism or biological model.
+scientific efforts can build off of each other
 
 \bigskip
 \begin{center}
@@ -250,19 +209,16 @@ The quick brown fox jumped over the lazy dog.
 
 \begin{description}
 
-\item[Title:] Brief description. (file type)
+\item[Title:] Website and GitHub repository containing the complete teaching materials developed and demonstrated here.
 
-\item[R-package for  MYNEW routine:] R-package ÒMYNEWÓ containing code to perform the diagnostic methods described in the article. The package also contains all datasets used as examples in the article. (GNU zipped tar file)
+\item[GitHub repository link:] \url{https://github.com/McTavishLab/R_OpenTree_tutorials}
 
-\item[HIV data set:] Data set used in the illustration of MYNEW method in Section~ 3.2. (.txt file)
+\item[Website link:] \url{https://mctavishlab.github.io/R_OpenTree_tutorials}
 
 \end{description}
 
-\section{BibTeX}
-
-We hope you've chosen to use BibTeX!\ If you have, please feel free to use the package natbib with any bibliography style you're comfortable with. The .bst file Chicago was used here, and agsm.bst has been included here for your convenience. 
-
-\bibliographystyle{Chicago}
+\bibliographystyle{agsm}
 
 \bibliography{Bibliography-MM-MC}
+
 \end{document}
