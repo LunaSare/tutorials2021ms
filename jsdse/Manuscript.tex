@@ -83,7 +83,7 @@ documentation of scientific workflows.
 
 \newpage
 \spacingset{1.45} % DON'T change the spacing!
-\section{Introduction}
+\section*{Introduction}
 \label{sec:intro}
 
 Reproducibility --the extent to which consistent results are obtained when a scientific
@@ -117,16 +117,21 @@ and automatic scientific workflows.
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
-    \textbf{Box 1.}
-      Availability does not imply accessibility. One example we find really useful is the
-      marshmallows in an office story.
-      Brand new marshmallow bags remained in a common office area after a social gathering.
-      The marshmallows did not belong to anyone anymore, so they were freely
-      available for eating by anyone in the office.
+    \textbf{Box 1. The role of accessibility to achieve full availability.}
+      Availability is generally defined as the ability or potential of something
+      to be used and accessed (\cite{availability2022cambridge}).
+      Following this definition, accessibility is generally considered a synonym of availability.
+      Yet, in practice, availability does not imply accessibility.
+      One example we find really useful to practically differentiate the concepts of availability and accessibility
+      is the "marshmallows in an office" story, which goes like this.
+      A couple of brand new marshmallow bags remained in a common office area after
+      a social gathering.
+      The marshmallows were not claimed by anybody, so they were left in the common are,
+      freely available to be taken or eaten by anyone in the office.
       Yet, the marshmallow bags stayed in the common area, unopened for days and even weeks.
-      It was not until someone opened the bags and placed the marshmallows on a tray,
+      It was not until someone decided to open the bags and placed the marshmallows on a tray,
       that people started actually eating them. They were gone in a matter of hours.
-      Scientific products are not sweet as marshmallows, but they are a coveted asset.
+      Scientific products are not sweet as marshmallows, but they are a coveted resource.
       While sharing, describing and documenting makes scientific products available,
       it does not necessarily makes them accessible. For example, documentation of an
       available scientific workflow might be written using expert language that is too foreign
@@ -134,17 +139,18 @@ and automatic scientific workflows.
       be able to invest the time to learn the expert language to successfully reproduce
       the workflow, this will not be the case for the majority, even if it is
       something that would be useful long term, the short term time investment
-      is often too high for individuals to engage with it.
+      is often too high for individuals to engage with it, making the workflow and its results
+      effectively inaccessible and hence unavailable to the majority of the community.
     }%
 }
 \bigskip
 
 
 To elaborate on our thesis, we use an example in evolutionary biology that focuses
-on understanding the shared ancestry among organisms through phylogenetic trees, which provide the
+on understanding the shared ancestry of organisms through phylogenetic trees, which provide the
 basis to study and understand biological processes in an evolutionary context (\cite{dobzhansky1973nothing}).
 As such, improving reproducibility and availability
-of phylogenetic research is relevant for many aspects of biological research.
+in phylogenetic research is relevant for many aspects of biological research.
 The Open Tree of Life project (OpenTree) has developed a platform that facilitates
 availability of results from phylogenetic research, by standardizing and storing
 phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing
@@ -180,9 +186,8 @@ We present a set of principles to generate documentation that improves accessibi
  of code and documentation. We applied these principles to a series of tutorials
   and vignettes developed for the OpenTree project.
 
-\section{Methods}
-\label{sec:meth}
-\subsection*{Identifying hurdles to accessibility}
+\section*{Identifying hurdles to accessibility}
+\label{sec:identifying}
 
 Good primary documentation for code describes general usage of individual functions,
  the components and variables a function can take, and it should be accompanied with
@@ -201,9 +206,10 @@ Vignettes and tutorials work as secondary pieces of documentation, that help to 
    While secondary documentation has become more common practice,
     it is still often generated using highly specialized language.
 
-\subsection*{Adressing hurdles to accessibility: the principles}
+\section*{Addressing hurdles to accessibility: some principles}
+\label{sec:addressing}
 
-\subsubsection*{1. Demonstrate integration of function usage with motivating examples}
+\subsubsection*{a. Demonstrate integration of function usage with motivating examples}
 
 We examined available primary documentation for the OpenTree API R wrapper (the package `rotl`),
 and designed a workflow that visits as many functions as possible, and demonstrate
@@ -215,7 +221,7 @@ of functions to specific use cases in biology.
 For the tutorial demonstrated here, we used the commonly requested use case of obtaining
 a phylogenetic tree for all lineages within a specific taxonomic rank.
 
-\subsubsection*{2. Demonstrate errors and warnings thoroughly}
+\subsubsection*{b. Demonstrate errors and warnings thoroughly}
 
 Primary documentation focuses on demonstrating usage function with examples that
 work seamlessly, without errors. We argue that the opposite is needed to support
@@ -235,6 +241,13 @@ from errors.
 Many finely honed tutorials do not trigger errors, which precludes helping students
 to develop the tools to understand and address errors when they do encounter them,
 as they inevitably will.
+On our tutorial, we focus on explaining the meaning and downstream coof warnings and errors, and
+ showcase ways to detect them before they are triggered (i.e., before using an input
+  that would elicit a warning or error). This has two pedagogical benefits:
+1) it provides users/students with the means to troubleshoot their own warnings and erros, and
+2) it allows users/students to understand with more depth what the function is doing.
+
+We designed ways to access the different elements of the outputs.
 
 \begin{figure}
 \begin{center}
@@ -243,7 +256,7 @@ as they inevitably will.
 \caption{Snapshot of a section of the tutorial website, where we demonstrate a common error. \label{fig:first}}
 \end{figure}
 
-\subsubsection*{3. Avoid jargon and expert language}
+\subsubsection*{c. Avoid jargon and expert language}
 
 Besides avoiding formal language, and incorporating elements of pop culture, such as picture
 character icons known as "emojis", to make the language more familiar to a
@@ -256,7 +269,7 @@ For example, when we presented the tutorial for a team specialized in Amphibians
 we tailored the examples using frogs and their allies.
 
 
-\subsubsection*{4. Make it stable through time}
+\subsubsection*{d. Make it stable through time}
 
 We published the tutorials on a public, free license, free of cost, and free for
 use and reuse repository and persistent website (\cite{RopentreeTutorials, RopentreeTutorialsWebsite}).
@@ -281,13 +294,24 @@ in the tutorial.
 %%%
 %%% > [name=Emily Jane McTavish]link to where/and how you did that
 
-\section{Conclusion}
+\section*{Conclusion}
 \label{sec:conclusion}
 
-We explain the warnings and errors and design ways to avoid them, and detect them
- beforehand (i.e., before using an input that would give an error).
-  We explain the consequences of warnings.
-We designed ways to access the different elements of the outputs.
+Ultimately, the improvement of reproducibility rates in science long term depends
+on our ability to intentionally integrate the subject of reproducibility in the
+the curriculum for college students and aspiring researchers to develop the skills
+necessary to create reproducible scientific workflows and materials.
+
+Some universities have been incorporating the subject in their classes (see University
+ of Washington and The National Institute for General Medical Sciences).
+The focus has been on students to develop skills to document their work.
+The principles identified and outlined here can be used to set learning goals and
+ outcomes on new reproducibility syllabus.
+
+
+
+
+
 We have received emails from senior researchers thanking us for this materials,
  and students have been able to engage using the packages with less hep from the PIs.
 
@@ -312,10 +336,6 @@ Making accessible reproducible workflows has several advantages:
 save explanation/training time when analyses are run again by students and collaborators.
 save research time for yourself when analyses are run again with more data, a different dataset, a different organism or biological model.
 scientific efforts can build off of each other
-
-Intentional integration of the subject of scientific reproducibility into
- the curriculum is a key aspect to promote reproducible practices long term.
-There are different elements that permit fully reproducible science.
 
 \bigskip
 \begin{center}
