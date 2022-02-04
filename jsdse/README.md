@@ -19,7 +19,7 @@ on line 13 of Manuscript.tex, then do:
 ```
 cd jsdse
 R -e 'tools::texi2pdf(file = "Manuscript.tex", clean=TRUE)'
-mv jsdse/TAS-template.pdf jsdse/Manuscript_with_author_details.pdf
+mv Manuscript.pdf Manuscript_with_author_details.pdf
 cd ..
 ```
 
@@ -29,6 +29,6 @@ of Manuscript.tex, and do:
 ```
 cd jsdse
 R -e 'tools::texi2pdf(file = "Manuscript.tex", clean=TRUE)'
-mv jsdse/TAS-template.pdf jsdse/Manuscript_anonymous.pdf
+mv Manuscript.pdf Manuscript_blind.pdf
 cd ..
 ```
