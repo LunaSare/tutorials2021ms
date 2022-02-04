@@ -149,13 +149,13 @@ and automatic scientific workflows.
 To elaborate on our thesis, we use an example in evolutionary biology that focuses
 on understanding the shared ancestry of organisms through phylogenetic trees, which provide the
 basis to study and understand biological processes in an evolutionary context (\cite{dobzhansky1973nothing}).
-As such, improving reproducibility and availability
+As such, improving reproducibility rates
 in phylogenetic research is relevant for many aspects of biological research.
-The Open Tree of Life project (OpenTree) has developed a platform that facilitates
-availability of results from phylogenetic research, by standardizing and storing
-phylogenetic data with the goal of synthesizing a single phylogenetic tree encompassing
+The Open Tree of Life project (OpenTree) has developed a computational platform that provides
+availability of results from phylogenetic research, by creating a standardized database of
+phylogenetic data that is used to synthesize a single phylogenetic tree encompassing
 all life (\cite{opentreeoflife2019synth}).
-All data in OpenTree is open access and available programmatically through its many
+The OpenTree database Phylesystem (\cite{}) is open access and available programmatically through its many
 Application Programming Interface (API) services (\cite{opentreeAPIs}).
 Additionally, R packages (\cite{michonneau2016rotl}) and Python libraries
 (\cite{mctavish2021opentree}) have been developed as wrappers for OpenTree API services
@@ -168,9 +168,12 @@ knowledge for biological research (\cite{sanchez2019datelife}) and education
 The OpenTree project demonstrates that efforts to increase availability for reproducibility
 in phylogenetics have also increased baseline computational knowledge and skills
 required in the field.
-Baseline computational skill requirements are likely increasing across all natural sciences.
-Computing is not traditionally a core skill taught to biologists and naturalists.
-However, many students are now being trained in R as a statistics and data analysis environment.
+"Computers are playing an increasingly important role in many scientific disciplines" (\cite{piccolo2016tools}).
+Baseline computational skill requirements are increasing across all natural sciences.
+Yet, computing is not traditionally a core skill taught to biologists and naturalists
+(\cite{sayres2018bioinformatics, wright2019the, williams2019barriers}).
+Still, many students are now being trained in R programming language as a statistics and data analysis environment.
+% "Thus efforts to increase scientific reproducibility should consider the ubiquity of computers in research."
 In order for reproducible computational tools to be adopted for research, they
  need to be much more accessible for present and future researchers.
 Data and code availability is a core requirement for reproducibility research
@@ -198,18 +201,28 @@ As opposed to code, primary documentation is written in natural language (i.e.,
    words, and phrases) as well as formal language, which often slows down or even
     obstructs examination, application, and adoption of code by external individuals.
 Because primary documentation is considered a professional document, acceptance
- of the research by the scientific community could be reduced if a more informal
+ of the research by the scientific community could diminish if a more informal
   language is used.
 Vignettes and tutorials work as secondary pieces of documentation, that help to demonstrate
  additional cases of individual function usage, and showcase function associations
   that work for specific analysis workflows in more detail.
-   While secondary documentation has become more common practice,
-    it is still often generated using highly specialized language.
+As secondary documentation has become more common practice, we identify and propose
+a series of principles to support improved accessibility for secondary documentation.
 
 \section*{Addressing hurdles to accessibility: some principles}
 \label{sec:addressing}
 
-\subsubsection*{a. Demonstrate integration of function usage with motivating examples}
+\subsubsection*{a. Literate programming: Demonstrate code usage with integrative examples}
+
+%% By definition, all languages are abstract. We learn them because we grow up with them and they have a direct application for our lives.
+%% Programming languages are no different, however, we start learning those later in life and we do not use them as regularly, making it harder for us to learn them and use them.
+Programming languages are abstract and usually hard to remember without
+an obvious link to an application (\cite{knuth1984literate}).
+A story or narrative that links pieces of code together can greatly support users/students
+to remember the code and its usage.
+The "literate programming" paradigm (\cite(knuth1984literate))
+integrates narratives with computer code in the same document, to support users
+in following the code usage, improving reproducibility of scientific analyses (\cite(piccolo2016tools)).
 
 We examined available primary documentation for the OpenTree API R wrapper (the package `rotl`),
 and designed a workflow that visits as many functions as possible, and demonstrate
@@ -241,7 +254,7 @@ from errors.
 Many finely honed tutorials do not trigger errors, which precludes helping students
 to develop the tools to understand and address errors when they do encounter them,
 as they inevitably will.
-On our tutorial, we focus on explaining the meaning and downstream coof warnings and errors, and
+On our tutorial, we focus on explaining the meaning and downstream of warnings and errors, and
  showcase ways to detect them before they are triggered (i.e., before using an input
   that would elicit a warning or error). This has two pedagogical benefits:
 1) it provides users/students with the means to troubleshoot their own warnings and erros, and
