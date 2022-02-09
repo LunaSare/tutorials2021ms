@@ -334,11 +334,11 @@ test principles that can overcome current barriers to code accessibility.
 Pedagogical research shows that active learning practices are one the most effective
 ways to take on abstract subjects \citep{freeman2014active}.
 Programming computer languages are quite abstract and learning them can be greatly
-enhanced by applying an active learning strategy such as a linking its usage to
+enhanced by applying an active learning strategy such as linking its usage to
 a ``real world'' or ``human'' application \citep{felder2009active}.
 
 A story-like narrative that links pieces of code together and invites learners
-to try the code can greatly support learners to remember what they are doing and
+to try the code can lead learners to remember what they are doing and
 why they are doing it.
 This ``literate programming'' paradigm \citep{knuth1984literate, fritzson2002mathmodelica}
 makes code more approachable, as it integrates narratives with computer code in
@@ -385,7 +385,7 @@ from errors.
 Many finely honed tutorials do not trigger errors, which precludes helping students
 to develop the tools to understand and address errors when they do encounter them,
 as they inevitably will.
-On our tutorial, we focus on explaining the meaning and downstream of warnings and errors, and
+In our tutorial, we focus on explaining the meaning and downstream of warnings and errors, and
  showcase ways to detect them before they are triggered (i.e., before using an input
   that would elicit a warning or error). This has two pedagogical benefits:
 1) it provides users/students with the means to troubleshoot their own warnings and errors, and
@@ -407,7 +407,7 @@ character icons known as ``emojis``, to make the language more familiar to a
 broader target audience (see Figure \ref{fig:first}), we made an effort to specifically
 complement the primary documentation by identifying
 computational concepts that were assumed or were not explained in depth.
-We vetted the tutorials with an audience on workshops as well as individual user.
+We vetted the tutorials through feedback from workshop participants as well as individual users.
 We choose examples that are charismatic for the audience.
 For example, when we presented the tutorial for a team specialized in Amphibians,
 we tailored the examples using frogs and their allies.
@@ -417,7 +417,7 @@ we tailored the examples using frogs and their allies.
 
 We published the tutorials on a public, free license, free of cost, and free for
 use and reuse repository and persistent website \citep{RopentreeTutorials, RopentreeTutorialsWebsite}.
-The tutorial is available for the users to go back to it any time they need it,
+The tutorial is available for the users to go back to any time they need it,
 and to be passed on to other users (Figure \ref{fig:second}).
 
 \begin{figure}
@@ -427,10 +427,11 @@ and to be passed on to other users (Figure \ref{fig:second}).
 \caption{Snapshot of the home to our tutorial website, showing part of the schedule. \label{fig:second}}
 \end{figure}
 
-Following the carpentries, we created a main version of the tutorial that
-is updated. Versions presented on workshops are a copy from the original repository,
-and represent a stable and temporal snapshot of the functions and workflows presented
-in the tutorial.
+We created a main version of the tutorial that is stable. Any updates to the tutorial are
+published as new versions, or tutorials for new workshops \citep{CARPENTRIES}
+ Versions presented at workshops are a copy from the original repository.
+They represent a temporally stable snapshot of functions and workflows presented
+during a workshop.
 
 %%% \subsubsection*{5. The (now) classics of computational reproducibility}
 %%%
@@ -441,6 +442,19 @@ in the tutorial.
 \section*{Conclusion}
 \label{sec:conclusion}
 
+Response form the community has been invaluable in gauging success of the tutorials.
+Senior researchers often comment on the usefulness
+of the tutorials for their research, as well as supporting students in using the
+R packages with less help from them as PIs.
+
+Making accessible reproducible workflows has several advantages:
+
+- save explanation/training time when analyses are run again by students and collaborators;
+- save research time for yourself when analyses are run again with more data, a
+  different dataset, a different organism or biological model;
+- scientific efforts can build off of each other.
+
+
 Ultimately, the long term improvement of reproducibility rates in science will depend
 on our ability to intentionally integrate the subject of reproducibility into the
 undergraduate curriculum, so college learners and future researchers have the
@@ -449,38 +463,26 @@ scientific workflows and materials.
 
 Some universities have been incorporating the subject in their classes (see
 \cite{uwlibraries2022, nigms2022}).
-The focus of this resources has been for students to develop skills to document their work.
+The focus of these resources has been for students to develop skills to document their work.
 The principles identified and outlined here can be used to set learning goals and
-outcomes on new reproducibility syllabus.
-
-
-
-
-
-We have received emails from senior researchers thanking us for this materials,
- and students have been able to engage using the packages with less hep from the PIs.
+outcomes on new reproducibility syllabi.
 
 The principles to create tutorials described here facilitate adoption of software
  and analysis workflows among researchers at different academic levels, from undergrads
   to established researchers.
-It will also help closing the gap between students that had access to computational
- resources (and computational training) from an early age and students that did not.
-  Late access to computational resources and training can occur due to lack of
-   economic resources, often occurring in households from underrepresented communities
-    and minorities.
+It will also help close the gap between students that had access to computational
+resources (and computational training) from an early age and students that did not.
+Late access to computational resources and training can occur due to lack of
+economic resources, often occurring in households from underrepresented communities
+and minorities \citep{REFERENCE-NEEDED}.
 It can also be due to gender-biased parental and community pressures,
- in which male individuals are more often encouraged to perform activities related to computers,
-  while female individuals are discouraged.
+in which male individuals are more often encouraged to perform activities related to computers,
+while female individuals are discouraged \citep{REFERENCE-NEEDED}.
 % How to balance software acceptance VS. adoption?
-These principles can be used to aide not only in improving reproducibility practices,
+These principles can be used to improve not only reproducibility practices,
  but also software adoption in the natural sciences.
 %% Discuss: why address accessibility and not other aspects of reproducibility?
 
-
-Making accessible reproducible workflows has several advantages:
-save explanation/training time when analyses are run again by students and collaborators.
-save research time for yourself when analyses are run again with more data, a different dataset, a different organism or biological model.
-scientific efforts can build off of each other
 
 \bigskip
 \begin{center}
