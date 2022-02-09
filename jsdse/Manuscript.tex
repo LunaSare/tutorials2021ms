@@ -34,7 +34,7 @@
 
 \if0\blind
 {
-  \title{\bf Promoting analysis reproducibility with accessibility: An example in evolutionary biology}
+  \title{\bf Teaching analysis reproducibility with accessibility: Enriching secondary documentation to support skill level diversity of users.}
   \author{Luna L. Sanchez Reyes\thanks{
     The authors gratefully acknowledge ``Sustaining the Open Tree of Life``, NSF ABI No. 1759838, and ABI No. 1759846.}\hspace{.2cm}\\
     School of Natural Sciences, University of California, Merced\\
@@ -50,37 +50,57 @@
   \bigskip
   \bigskip
   \begin{center}
-    {\LARGE\bf Promoting analysis reproducibility with accessibility: An example in evolutionary biology}
+    {\LARGE\bf Teaching analysis reproducibility with accessibility: Enriching secondary documentation to support skill level diversity of users.}
 \end{center}
   \medskip
 } \fi
 
 \bigskip
 \begin{abstract}
-Reproducibility is essential for scientific development. Efforts
-to increase scientific reproducibility have focused on increasing availability
-of code and data. However, availability does not imply accessibility, and the latter
-is infrequently addressed, even if it is key to achieve full workflow automatization
-and reproducibility. Using an example in evolutionary biology, we identify factors
-that have specifically affected accessibility in
-the natural sciences, and ways researchers can address this to ensure reproducible
-and automatic workflows.
-The Open Tree of Life project (OpenTree) has developed a platform that facilitates
-availability of results from evolutionary biology research. However, baseline
-computational knowledge and skills required to
-access scientific results are often not found among target users. While documentation
-is available, it is often written using highly specialized language that is also
- inaccessible for the average target user.
-We identified a set of principles to improve accessibility of OpenTree scientific data,
-implement them in a tutorial, and elaborate on their general application to code and
-documentation of scientific workflows.
+Research reproducibility is essential for scientific development. Yet, rates of reproducibility
+ are low, especially in the natural sciences. In the current scientific landscape,
+most research relies on computing tools and software. Hence, efforts for increasing
+reproducibility rates have focused on providing availability of scientific workflows
+as computer code, as well as raw and processed data in a digital form.
+However, making these research products widely available, usually online, does not
+necessarily ensures that
+they can be easily reached by the majority of the population,
+making them effectively inaccessible, counteracting availability and hindering reproducibility.
+
+In this paper, we argue that accessibility of resources is a key aspect of research reproducibility,
+yet, to our knowledge, it has been widely overlooked.
+We recognize that accessibility has many angles (social, psychological,
+education level), but we focus on lack of accessibility at the skill and pedagogical level.
+Using an example within evolutionary biology, we identify barriers to
+accessibility in the natural sciences:
+%% list the barriers
+highly specialized jargon,
+Then, we propose a set of principles to improve accessibility of code and data,
+and illustrate their application in a set of teaching materials for evolutionary biology that we put
+to work in the field.
+Finally, we elaborate on the general application of these principles for
+documenting scientific workflows, to provide present learners
+and future researchers with tools for successful scientific reproducibility.
+%> ** add a sentence on implications for teaching reproducibility
+
+
+%% Projects that address availability of code and data in the natural sciences
+%% have focused on producing documentation that describes the nature and usage of the
+%% resources.
+%% However, it is often written using highly specialized language that is largely
+%% inaccessible for the average target user. Additionally, baseline
+%% computational knowledge and skills required to access scientific results are often
+%% not found among potential users, and keep on increasing.
+
+%% **Introduce OpenTree in abstract??
+
 
 
 
 \end{abstract}
 
 \noindent%
-{\it Keywords:}  open science, education, R, phylogenetics, tutorials
+{\it Keywords:}  open science, R, phylogenetics, Open Tree of Life
 \vfill
 
 \newpage
@@ -89,9 +109,10 @@ documentation of scientific workflows.
 \label{sec:intro}
 
 Reproducibility --the extent to which consistent results are obtained when a scientific
-research experiment is repeated \citep{repdef2021}-- is a key aspect for the advancement
+research experiment or workflow is repeated \citep{repdef2021}--
+is a key aspect of the advancement
 of science, as it constitutes a minimum standard that allows understanding research products
-(e.g., methods, data, analysis, results, etc.),
+(e.g., methods, data, analysis, results, etc.)
 to determine their reliability and generality, and eventually build up scientific
 knowledge and applications based on those products
 \citep{king1995replication, peng2011reproducible, powers2019open}.
@@ -104,16 +125,18 @@ In response, the scientific community has been developing new principles and sta
 cultural changes in an effort to improve long term reproducibility rates in the natural sciences
 \citep{peng2015reproducibility, wilkinson2016fair}.
 A standard for reproducibility that has received much attention is scientific availability, which
-we define as the property of research products to be acquired, copied, analyzed,
+we define as a property denoting that a research product can be acquired, copied, analyzed,
 processed and/or reused, at no financial, legal or technical cost \citep{arnold2019turing},
 and with no geographic, demographic or temporal barriers for the population \citep{fecher2014open}.
 In this paper, we argue that availability can not be fully achieved without accessibility (Box 1).
 We identify factors that have particularly affected accessibility in
-the natural sciences, and ways scientific developers can address them to ensure reproducible
-and automatic scientific workflows. This principles can be generalized and integrated
-into the reproducibility curriculum to hopefully provide present learners and future researchers with
-the tools for successful scientific reproducibility.
-% full workflow automatization and reproducibility in the natural sciences
+the natural sciences, and ways the scientific community can address them to create reproducible
+scientific workflows. These principles can be generalized and integrated
+into the undergraduate and graduate school STEM curriculum, either for courses specialized
+in reproducibility or within other subject areas as a necessary component of
+successful and impactful science.
+
+% ** describe/introduce reproducibility curriculum here
 
 
 \bigskip
@@ -121,27 +144,55 @@ the tools for successful scientific reproducibility.
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
-    \textbf{Box 1. The role of accessibility to achieve full availability.}
-      Availability is generally defined as the ability or potential of something
-      to be used and accessed \citep{availability2022cambridge}.
-      Following this definition, accessibility is generally considered a synonym of availability.
-      Yet, in practice, availability does not imply accessibility.
-      One example we find really useful to practically differentiate the concepts of availability and accessibility
-      is the ``marshmallows in an office`` story, which goes like this.
+    \textbf{Box 1. The role of accessibility in improving reproducibility.}
+      % Availability is defined as the fact or possibility that something can be bought,
+      % used, or reached by someone \citep{availability2022cambridge}.
+      % Accessibility is defined as "the fact of being able to be reached or obtained easily"
+      % \citep{accessibility2022cambridge}
+      Availability and accessibility are conceptually accepted as synonyms for ``the fact
+      of being able to be reached" \citep{available-accessible2022cambridge}.
+      However, accessibility's definition goes further and describes it as the
+      ``fact of being able to be reached \textbf{easily}" \citep{accessibility2022cambridge}.
+      A secondary definition of accessibility elaborates more on this: ``the quality
+      of being \textbf{easy to understand}''.
+      % Yet, in practice, availability does not imply accessibility.
+
+      What we realize from these definitions is that in practice, something might
+      be available but not necessarily accessible,
+      hindering the realization of availability.
+      To illustrate the practical difference between availability and accessibility we
+      will use an allegory that goes like this:
+
+      ** Change marshmallow story to cake
+
+      ** Explain different types of barriers to accessibility within the example, then within science
+
+      ** Explain why we focus on psychological/social/pedagogical barriers
+
+
       A couple of brand new marshmallow bags remained in a common office area after
       a social gathering.
-      The marshmallows were not claimed by anybody, so they were left in the common are,
+      The marshmallows were not claimed by anybody, so they were left in the common area,
       freely available to be taken or eaten by anyone in the office.
       Yet, the marshmallow bags stayed in the common area, unopened for days and even weeks.
       It was not until someone decided to open the bags and placed the marshmallows on a tray,
       that people started actually eating them. They were gone in a matter of hours.
       Scientific products are not sweet as marshmallows, but they are a coveted resource.
       While sharing, describing and documenting makes scientific products available,
-      it does not necessarily makes them accessible. For example, documentation of an
+      it does not necessarily makes them accessible.
+
+      ** Now, explain different types of barriers to accessibility in science
+      (Jessica: Maybe say that lack of accessibility can be due to a number of
+      factors (physical, resources, economic), but one critical factor is the use
+      of impenetrable expert language.)
+
+      For example, documentation of an
       available scientific workflow might be written using expert language that is too foreign
-      for a general audience to successfully reproduce the workflow. While some individuals might
+      for a general audience to successfully reproduce the workflow.
+
+      While some individuals might
       be able to invest the time to learn the expert language to successfully reproduce
-      the workflow, this will not be the case for the majority, even if it is
+      the workflow, this will not be the case for the majority; even if it is
       something that would be useful long term, the short term time investment
       is often too high for individuals to engage with it, making the workflow and its results
       effectively inaccessible and hence unavailable to the majority of the community.
@@ -150,19 +201,39 @@ the tools for successful scientific reproducibility.
 \bigskip
 
 
-To elaborate on our thesis, we use a widely used scientific workflow in phylogenetics,
-a research field within evolutionary biology that focuses
-on understanding the shared ancestry of living organisms through the reconstruction of
-phylogenetic trees from biological data. Phylogenies provide the
+To elaborate on our thesis,
+%% we use a common scientific workflow in phylogenetics,
+%% ** Jessica mentions that workflow is confusing as she thought it referred to the OpenTree
+%% workflow, but we actually mean the more general workflow of reconstructing a phylogenetic tree.
+%% She suggests something more general:
+we choose an example from the research field of phylogenetics,
+a discipline within evolutionary biology. Phylogenetics focuses
+on investigating the history of shared ancestry of living organisms from biological data,
+and represents
+this evolutionary history in a diagram known as phylogeny (a figure from the tutorial).
+Phylogenies provide the
 basis to study and understand all biological processes in an evolutionary context
 \citep{dobzhansky1973nothing}.
-Given the importance of phylogenies, improving reproducibility rates
-in phylogenetic research is increasingly relevant for many aspects of the natural sciences.
+Given the importance of phylogenies for biological research, improving reproducibility rates
+in phylogenetics is increasingly relevant for many aspects of the natural sciences.
+
+***What other platforms provide resources for reproducibility in phylogenetics???
+
 The Open Tree of Life project (OpenTree) has developed a computational platform that provides
-availability of results from phylogenetic research, by creating a standardized database of
-phylogenetic data that is used to synthesize a single phylogenetic tree encompassing
-all life \citep{opentreeoflife2019synth}.
-The OpenTree database Phylesystem \citep{mctavish2015phylesystem} is programmatically
+availability of results from vetted, state-of-the-art research in phylogenetics
+\citep{opentreeoflife2019synth}.
+%% by creating a standardized database of phylogenetic data that is used to synthesize
+%% a single phylogenetic tree encompassing all life
+OpenTree's database, the Phylesystem \citep{mctavish2015phylesystem}, provides
+accessibility of phylogenetic data by standardizing organism names across biological databases,
+and supporting digital data obtention in a computer readable format.
+While this is accessible through their Graphical User Interface,
+It does not support reproducibility
+Accessibility does not imply reproducibility
+In order for something to be highly reproducible, it has to be largely accessible.
+
+
+is programmatically
 available free of cost to users through OpenTree's Application Programming Interface
 (API) services \citep{opentreeAPIs}.
 Additionally, software packages written with open source, free of cost programming
@@ -180,39 +251,47 @@ has been cited by more than 190 biological research papers addressing various
 topics \citep{googlerotl}.
 Comparatively, other R packages for phylogenetics, such as \texttt{GGTREE}
 and \texttt{mixOmics}, which were released one year after \texttt{rotl} have been
-cited over a thousand times, which might indicate that \texttt{rotl} has not been
-adopted as widely.
-%% We need a proper statistical distribution of citation numbers per year, to see if rotl is an outlier or not.
+cited over a thousand times, which might indicate a delay \texttt{rotl}
+adoption. Of course one potential explanation is that OpenTree services do not have
+as wide an application as services provided by the afore mentioned R packages.
+However, the
+expressed enthusiasm (interest to use/inability to use the resource) by the target
+ audience and larger community might point to a different issue.
+%% We need a proper statistical distribution of citation numbers per year, to see
+%% if rotl is an outlier or not.
 
 While learners in the natural sciences have been engaging independently with R
-and Python programming language
+and Python programming languages
 as they represent two of the most widely used programming languages in the sciences
 % for their fast and seamless statistics and data analysis environment
 \citep{baker2017scientific}, computer programming is not traditionally
 a core skill formally taught to biologists and naturalists
-\citep{sayres2018bioinformatics, wright2019the, williams2019barriers},
-However, the OpenTree project demonstrates that efforts to improve availability and reproducibility
-in phylogenetics have increased required baseline computational knowledge and skills
+\citep{sayres2018bioinformatics, wright2019the, williams2019barriers}.
+Moreover, the main usage of the OpenTree API services hints that tools intended to
+improve availability and reproducibility come at a cost for the potential users:
+ an increased required baseline computational knowledge and skillset
 in the field.
 As computers continue to play a larger role in most scientific disciplines \citep{piccolo2016tools},
-baseline computational skill requirements are also increasing across all natural sciences.
+higher baseline computational skills are required across all natural sciences.
 % "Thus efforts to increase scientific reproducibility should consider the ubiquity of computers in research."
 % In order for reproducible computational tools to be adopted for research, they
 % need to be readily accessible for present and future researchers.
 Thus, efforts to increase reproducibility rates in the natural sciences must consider
-the particularities of scientific workflows that rely on usage of programming languages, such as
+the specifics of scientific workflows that rely on usage of programming languages, such as
 availability and accessibility of data and code \citep{peng2011reproducible, sandve2013ten, powers2019open}.
 % However, the utility of data resources is limited by the technical challenges of accessing the data.
 % In order to motivate reproducible research, that gap needs to be bridged.
 % In this work we focus on improving accessibility of code examples and documentation.
 
 We chose a phylogenetics workflow that relies on data and code from OpenTree to
-identify the specific barriers to accessibility and reproducibility it presents.
+identify the specific barriers to accessibility it presents.
 Then, we design ways to overcome or diminish these barriers and apply them to
 a series of tutorials and vignettes developed for the OpenTree project.
-Finally, we generalize our finding to suggest a set of
-principles that can be used as guide to develop code and documentation materials
-with increased accessibility that can improve availability and contribute to reproducibility.
+The tutorials are available at https://mctavishlab.github.io/R\_OpenTree\_tutorials/.
+
+Finally, we generalize our findings to suggest a set of
+principles that can be used as a guide to develop code and documentation materials
+with increased accessibility, to improve availability and contribute to reproducibility.
 Notably, these principles can be incorporated as learning goals into any syllabus for a
 course or workshop on best practices for scientific reproducibility.
 % In particular, we identify the necessity for documentation that is written down
@@ -241,7 +320,6 @@ that work for specific analysis workflows in more detail.
 As secondary documentation has become more common practice and is more flexible
 in its form and content, it constitutes an ideal canvas to develop, implement and
 test principles that can overcome current barriers to code accessibility.
-The tutorials are available at https://mctavishlab.github.io/R\_OpenTree\_tutorials/.
 
 \section*{Addressing hurdles to accessibility: some principles}
 \label{sec:addressing}
