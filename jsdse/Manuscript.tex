@@ -58,23 +58,26 @@
 \bigskip
 \begin{abstract}
 Research reproducibility is essential for scientific development. Yet, rates of reproducibility
- are low, especially in the natural sciences. In the current scientific landscape,
-most research relies on computing tools and software. Hence, efforts for increasing
-reproducibility rates have focused on providing availability of scientific workflows
+are low, especially in the natural sciences. As increasingly more research is relying on
+computing tools and software, efforts for improving
+reproducibility rates have focused on providing availability of research workflows
 as computer code, as well as raw and processed data in a digital form.
-However, making these research products widely available, usually online, does not
+However, making research products digitally available, does not
 necessarily ensures that
-they can be easily reached by the majority of the population,
-making them effectively inaccessible, counteracting availability and hindering reproducibility.
+they can be easily reached by the majority of the target user base, let alone the general population,
+making them effectively inaccessible, counteracting availability, and hindering reproducibility.
 
-In this paper, we argue that accessibility of resources is a key aspect of research reproducibility,
-yet, to our knowledge, it has been widely overlooked.
-We recognize that accessibility has many angles (social, psychological,
-education level), but we focus on lack of accessibility at the skill and pedagogical level.
+In this paper, we argue that accessibility of resources is a key aspect for
+successful research reproducibility.
+While accessibility is a broad term that encompasses various aspects
+of the human experience (visual, motor, auditory, cognitive, social, psychological,
+educational, etc.), we particularly address barriers to accessibility at the
+technological, social and pedagogical level.
 Using an example within evolutionary biology, we identify barriers to
 accessibility in the natural sciences:
 %% list the barriers
-highly specialized jargon,
+specialized jargon, user programming experience, cognitive load,
+
 Then, we propose a set of principles to improve accessibility of code and data,
 and illustrate their application in a set of teaching materials for evolutionary biology that we put
 to work in the field.
@@ -108,8 +111,8 @@ and future researchers with tools for successful scientific reproducibility.
 \section*{Introduction}
 \label{sec:intro}
 
-Reproducibility --the extent to which consistent results are obtained when a scientific
-research experiment or workflow is repeated \citep{repdef2021}--
+Research reproducibility --the extent to which consistent results are obtained when
+a scientific experiment or research workflow is repeated \citep{repdef2021}--
 is a key aspect of the advancement
 of science, as it constitutes a minimum standard that allows understanding research products
 (e.g., methods, data, analysis, results, etc.)
@@ -117,7 +120,7 @@ to determine their reliability and generality, and eventually build up scientifi
 knowledge and applications based on those products
 \citep{king1995replication, peng2011reproducible, powers2019open}.
 In the natural sciences, rates of reproducibility are low \citep{ioannidis2005most, prinz2011believe},
-which has elicited concerns about a reproducibility crisis in the field \citep{baker2016reproducibility}.
+which has elicited concerns about a crisis in the field \citep{baker2016reproducibility}.
 %%% The scientific community has united to incentivize cultural changes that will improve
 %%% reproducibility rates long term, such as transparency, availability, and workflow
 %%% automatization, to name a few \citep{peng2015reproducibility}.
@@ -125,15 +128,28 @@ In response, the scientific community has been developing new principles and sta
 cultural changes in an effort to improve long term reproducibility rates in the natural sciences
 \citep{peng2015reproducibility, wilkinson2016fair}.
 A standard for reproducibility that has received much attention is scientific availability, which
-we define as a property denoting that a research product can be acquired, copied, analyzed,
-processed and/or reused, at no financial, legal or technical cost \citep{arnold2019turing},
-and with no geographic, demographic or temporal barriers for the population \citep{fecher2014open}.
+we define as a property denoting that a research product can be reached (acquired, copied, analyzed,
+processed and/or reused) at no financial, legal or technical cost \citep{arnold2019turing},
+and without geographic, demographic, social or temporal barriers for the population \citep{fecher2014open}.
 In this paper, we argue that availability can not be fully achieved without accessibility (Box 1).
+
+We recognize that accessibility is a term that encompasses various aspects
+of the human experience (visual, motor, auditory, cognitive, social, psychological,
+educational, etc.).
+However, some forms of accessibility do not support reproducibility. For example,
+Graphical User Interfaces
+and
+we focus on X types of accessibility
+
+% not all types of accessibility support reproducibility
+% while accessibility is key to support availability, and availability is ket for reproducibility,
+% some forms of accessibility do not support reproducibility.
+
 We identify factors that have particularly affected accessibility in
 the natural sciences, and ways the scientific community can address them to create reproducible
-scientific workflows. These principles can be generalized and integrated
+research workflows. These principles can be generalized and integrated
 into the undergraduate and graduate school STEM curriculum, either for courses specialized
-in reproducibility or within other subject areas as a necessary component of
+in reproducibility or within other subject areas, as a necessary component of
 successful and impactful science.
 
 % ** describe/introduce reproducibility curriculum here
@@ -200,6 +216,8 @@ successful and impactful science.
 }
 \bigskip
 
+\section*{An example from phylogenetics}
+\label{sec:example}
 
 To elaborate on our thesis,
 %% we use a common scientific workflow in phylogenetics,
@@ -210,12 +228,13 @@ we choose an example from the research field of phylogenetics,
 a discipline within evolutionary biology. Phylogenetics focuses
 on investigating the history of shared ancestry of living organisms from biological data,
 and represents
-this evolutionary history in a diagram known as phylogeny (a figure from the tutorial).
+this evolutionary history in a diagram known as phylogeny (Figure \ref{fig:tree}).
 Phylogenies provide the
 basis to study and understand all biological processes in an evolutionary context
-\citep{dobzhansky1973nothing}.
-Given the importance of phylogenies for biological research, improving reproducibility rates
-in phylogenetics is increasingly relevant for many aspects of the natural sciences.
+\citep{dobzhansky1973nothing}. Hence,
+% Given the importance of phylogenies for biological research,
+it appears that improving reproducibility rates
+in phylogenetics has the potential to positively impact research across the natural sciences.
 
 ***What other platforms provide resources for reproducibility in phylogenetics???
 
@@ -227,9 +246,12 @@ availability of results from vetted, state-of-the-art research in phylogenetics
 OpenTree's database, the Phylesystem \citep{mctavish2015phylesystem}, provides
 accessibility of phylogenetic data by standardizing organism names across biological databases,
 and supporting digital data obtention in a computer readable format.
+
 While this is accessible through their Graphical User Interface,
 It does not support reproducibility
+
 Accessibility does not imply reproducibility
+
 In order for something to be highly reproducible, it has to be largely accessible.
 
 
@@ -298,6 +320,13 @@ course or workshop on best practices for scientific reproducibility.
 % using language that is common to the target audience to facilitate examination,
 % application, and adoption of code by the wider audience.
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{fig-tree.png}
+\end{center}
+\caption{A phylogenetic tree from our tutorial website, extracted using OpenTree of Life tools and the rotl R package. \label{fig:second}}
+\end{figure}
+
 \section*{Identifying hurdles to accessibility}
 \label{sec:identifying}
 
@@ -338,32 +367,38 @@ enhanced by applying an active learning strategy such as linking its usage to
 a ``real world'' or ``human'' application \citep{felder2009active}.
 
 A story-like narrative that links pieces of code together and invites learners
-to try the code can lead learners to remember what they are doing and
+to try the code, can lead learners to remember what they are doing and
 why they are doing it.
 This ``literate programming'' paradigm \citep{knuth1984literate, fritzson2002mathmodelica}
 makes code more approachable, as it integrates narratives with computer code in
-the same document, supporting learners in actively following, remembering and understanding
-the code usage \citep{piccolo2016tools}.
-Documents developed with ``literate programming'' can be made more accessible by
-choosing narratives that are relatable to a more general audience.
+the same document, supporting learners in actively following
+the code usage, supporting memory and understanding \citep{piccolo2016tools}.
+
+We propose that documents developed with ``literate programming'' can be made more
+accessible by choosing narratives that are relatable to a more general audience.
+An easy way to do this in biology is choosing as model organism a taxon that a
+research group is more interested in studying. For the non-specialized user base,
+a highly charismatic group such as dinosaurs will do the trick.
+
 
 We examined available primary documentation for the package \texttt{rotl},
 and designed a narrative that required the usage of as many functions as possible.
 We demonstrate code applications that are commonly requested by OpenTree users,
-but that are not demonstrated in the R package primary documentation.
+but that are not demonstrated in the primary documentation of the R package.
 By framing the function workflow using highly requested uses, the documentation acquires a
-narrative arc that is easier to follow and remember by users. This can also facilitate the application
-of code to other use cases in biology of interest for the learners.
+narrative arc that is easier to follow and remember by users. This can also facilitate
+the application of code to other use cases in biology of interest for the users.
 
-%% Maybe Figure!! For the tutorial demonstrated here, we used the commonly requested use case of obtaining
+%% Maybe Figure!! For the tutorial demonstrated here, we used the commonly requested
+%% use case of obtaining
 %% a phylogenetic tree for all lineages within a specific taxonomic rank.
 
 \subsubsection*{b. Demonstrate errors and warnings thoroughly}
 
-A practice that has become more and more widespread in programming languages pedagogical practices
-is the use of typos and mistakes to normalize them for learners and show them how
+A practice that has become more and more widespread in programming-language pedagogical practices
+is the use of typos and mistakes to normalize them for learners, and show them how
 to solve them when they are outside the classroom \citep{shannon2015live}.
-Yet, this is rarely done for written pedagogical materials.
+Yet, this is rarely done on written pedagogical materials.
 Primary documentation focuses on demonstrating usage function with examples that
 work seamlessly, without errors. We argue that the opposite is needed to support
 adoption of reproducible workflows and support long term independence in learners
