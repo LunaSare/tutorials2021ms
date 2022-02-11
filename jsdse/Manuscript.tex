@@ -60,19 +60,21 @@
 Research reproducibility is essential for scientific development. Yet, rates of reproducibility
 are low, especially in the natural sciences. As increasingly more research is relying on
 computing tools and software, efforts for improving
-reproducibility rates have focused on providing availability of research workflows
-as computer code, as well as raw and processed data in a digital form.
-However, making research products digitally available, does not
+reproducibility rates have focused on digital availability of research workflows
+as computer code, as well as raw and processed data in computer readable form.
+However, making research products digitally available does not
 necessarily ensures that
-they can be easily reached by the majority of the target user base, let alone the general population,
+they can be easily reached by the majority of a target user base, let alone the general population,
 making them effectively inaccessible, counteracting availability, and hindering reproducibility.
 
-In this paper, we argue that accessibility of resources is a key aspect for
-successful research reproducibility.
-While accessibility is a broad term that encompasses various aspects
-of the human experience (visual, motor, auditory, cognitive, social, psychological,
-educational, etc.), we particularly address barriers to accessibility at the
+In this paper, we argue that accessibility of research products is a key aspect for
+improving reproducibility rates.
+While accessibility typically addresses differences in abilities (visual, hearing, cognitive).
+
+
+across individuals, we particularly address barriers to accessibility at the
 technological, social and pedagogical level.
+
 Using an example within evolutionary biology, we identify barriers to
 accessibility in the natural sciences:
 %% list the barriers
@@ -133,12 +135,14 @@ processed and/or reused) at no financial, legal or technical cost \citep{arnold2
 and without geographic, demographic, social or temporal barriers for the population \citep{fecher2014open}.
 In this paper, we argue that availability can not be fully achieved without accessibility (Box 1).
 
-We recognize that accessibility is a term that encompasses various aspects
-of the human experience (visual, motor, auditory, cognitive, social, psychological,
-educational, etc.).
-However, some forms of accessibility do not support reproducibility. For example,
-Graphical User Interfaces
-and
+We recognize that the term accessibility is used in relation to various aspects of
+the human experience. In relation to digital resources, these aspects have been broadly
+categorized in four axis: perception, operability, understanding and robustness \citep{chisholm2001web, caldwell2008web}
+% (visual, motor, auditory, cognitive, social, psychological, educational, etc.).
+Some forms of accessibility do not support automatization nor scalability.
+For example, Graphical User Interfaces (GUIs) are accessible, but not scalable and rarely automatizable.
+
+
 we focus on X types of accessibility
 
 % not all types of accessibility support reproducibility
@@ -173,7 +177,7 @@ successful and impactful science.
       of being \textbf{easy to understand}''.
       % Yet, in practice, availability does not imply accessibility.
 
-      What we realize from these definitions is that in practice, something might
+      What we realize from these definitions is that, in practice, something might
       be available but not necessarily accessible,
       hindering the realization of availability.
       To illustrate the practical difference between availability and accessibility we
@@ -184,6 +188,16 @@ successful and impactful science.
       ** Explain different types of barriers to accessibility within the example, then within science
 
       ** Explain why we focus on psychological/social/pedagogical barriers
+
+      ** Gauging accessibility of a resource is tricky because it depends on an
+      individual experience of what is in effect \textbf{easy} for someone.
+      \textbf{Easy} is a subjective quality that fully depends on individual perceptions
+      resulting from individual contexts.
+      As a society we are moving towards validating and welcoming all human experiences.
+      To improve accessibility levels in the natural sciences, it
+      is important to account for the factors that are creating different experiences
+      of what is \textbf{easy}.
+
 
 
       A couple of brand new marshmallow bags remained in a common office area after
@@ -228,7 +242,7 @@ we choose an example from the research field of phylogenetics,
 a discipline within evolutionary biology. Phylogenetics focuses
 on investigating the history of shared ancestry of living organisms from biological data,
 and represents
-this evolutionary history in a diagram known as phylogeny (Figure \ref{fig:tree}).
+this evolutionary history in a diagram known as a phylogeny (Figure \ref{fig:tree}).
 Phylogenies provide the
 basis to study and understand all biological processes in an evolutionary context
 \citep{dobzhansky1973nothing}. Hence,
@@ -239,12 +253,12 @@ in phylogenetics has the potential to positively impact research across the natu
 ***What other platforms provide resources for reproducibility in phylogenetics???
 
 The Open Tree of Life project (OpenTree) has developed a computational platform that provides
-availability of results from vetted, state-of-the-art research in phylogenetics
-\citep{opentreeoflife2019synth}.
+digital availability of phylogenetic results from vetted, state-of-the-art research
+in the field \citep{opentreeoflife2019synth}.
 %% by creating a standardized database of phylogenetic data that is used to synthesize
 %% a single phylogenetic tree encompassing all life
 OpenTree's database, the Phylesystem \citep{mctavish2015phylesystem}, provides
-accessibility of phylogenetic data by standardizing organism names across biological databases,
+usability of phylogenetic data by standardizing organism names across biological databases,
 and supporting digital data obtention in a computer readable format.
 
 While this is accessible through their Graphical User Interface,
@@ -257,7 +271,7 @@ In order for something to be highly reproducible, it has to be largely accessibl
 
 is programmatically
 available free of cost to users through OpenTree's Application Programming Interface
-(API) services \citep{opentreeAPIs}.
+(API) services \citep{opentreeAPIv3}.
 Additionally, software packages written with open source, free of cost programming
 languages commonly used in scientific research such as R and Python
 \citep{baker2017scientific} have been developed as wrappers that have increased the availability
@@ -404,8 +418,7 @@ work seamlessly, without errors. We argue that the opposite is needed to support
 adoption of reproducible workflows and support long term independence in learners
 \citep{gaspar2007restoring}.
 We demonstrate examples that do not work
-as expected and exemplify ways to address them (Figure \ref{fig:error
-}).
+as expected and exemplify ways to address them (Figure \ref{fig:error}).
 
 We identify inputs that would give
 a wide range of warnings and errors, focusing on demonstrating these cases. This
@@ -452,7 +465,7 @@ we tailored the examples using frogs and their allies.
 \subsubsection*{d. Make it stable through time}
 
 We published the tutorials on a public, free license, free of cost, and free for
-use and reuse repository and persistent website \citep{RopentreeTutorials, RopentreeTutorialsWebsite}.
+use and reuse repository and persistent website \citep{RopentreeTutorials}.
 The tutorial is available for the users to go back to any time they need it,
 and to be passed on to other users (Figure \ref{fig:schedule}).
 
@@ -464,7 +477,7 @@ and to be passed on to other users (Figure \ref{fig:schedule}).
 \end{figure}
 
 We created a main version of the tutorial that is stable. Any updates to the tutorial are
-published as new versions, or tutorials for new workshops \citep{CARPENTRIES}
+published as new versions, or tutorials for new workshops \citep{wilson2006swc, SWCwebsite}
  Versions presented at workshops are a copy from the original repository.
 They represent a temporally stable snapshot of functions and workflows presented
 during a workshop.
