@@ -1,0 +1,60 @@
+%% I think I have three different points here:
+%% internalizing knowledge is made easier with active learning practices: learn by doing!
+%% literate programming allows learning by doing AND at the same time provides a story that connects the acquired knowledge to a real worl problem.
+%% By definition, all languages are abstract. We learn them because we grow up with them and they have a direct application for our lives.
+%% Programming languages are no different, however, we start learning those later in life and we do not use them as regularly, making it harder for us to learn them and use them.
+
+
+Finally, we generalize our findings to suggest a set of
+principles that can be used as a guide for approachable research workflows.
+Notably, these principles can be incorporated as learning goals into any syllabus for a
+course or workshop on best practices for scientific reproducibility.
+We believe that adoption of these principles and its incorporation to teaching resources
+can improve long term availability and contribute to sustainable reproducibility
+in the natural sciences.
+
+% The utility of resources is limited by the technical challenges of accessing the resources.
+
+
+We recognize that the term accessibility is used in relation to various aspects of
+the human experience. In relation to digital resources, these aspects have been broadly
+categorized in four axis: perception, operability, understanding and robustness \citep{chisholm2001web, caldwell2008web}
+% (visual, motor, auditory, cognitive, social, psychological, educational, etc.).
+Some forms of accessibility do not support automatization nor scalability.
+For example, Graphical User Interfaces (GUIs) are accessible, but not scalable and rarely automatizable.
+
+
+Our case study uses data and services from OpenTree, to
+identify aspects that can make research workflows in phylogenetics more
+approachable to a larger audience.
+
+Additionally, the main usage of the OpenTree API services hints that tools intended to
+improve availability and reproducibility come at a cost for the potential users:
+ an increased required baseline computational knowledge and skillset
+in the field.
+
+Yet, the R and Python OpenTree API wrapper software packages have been mainly used
+by computer-literate individuals
+to seamlessly establish reproducible workflows to use and reuse expert phylogenetic
+knowledge for biological research \citep{sanchez2019datelife, sanchez2021physcraper}
+and education \citep{nguyen2020phylotastic, phylotasticedtools, galacticedtools}.
+
+
+In the 5 years since its release, the R package wrapper for OpenTree \texttt{rotl}
+has been cited by more than 190 biological research papers addressing various
+topics \citep{googlerotl}.
+Comparatively, other R packages for phylogenetics, such as \texttt{GGTREE}
+and \texttt{mixOmics}, which were released one year after \texttt{rotl} have been
+cited over a thousand times, which might indicate a delay \texttt{rotl}
+adoption. Of course one potential explanation is that OpenTree services do not have
+as wide an application as services provided by the afore mentioned R packages.
+However, the
+expressed enthusiasm (interest to use/inability to use the resource) by the target
+ audience and larger community might point to a different issue.
+%% We need a proper statistical distribution of citation numbers per year, to see
+%% if rotl is an outlier or not.
+
+
+% In particular, we identify the necessity for documentation that is written down
+% using language that is common to the target audience to facilitate examination,
+% application, and adoption of code by the wider audience.

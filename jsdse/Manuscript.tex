@@ -125,24 +125,21 @@ we define as a property denoting that a research product can be reached (acquire
 processed and/or reused) at no financial, legal or technical cost \citep{arnold2019turing},
 and without geographic, demographic, social or temporal barriers for the population \citep{fecher2014open}.
 
-%% In this paper, we argue that availability can not be fully achieved
-%% without approachability (Box 1).
-However, research products that are digitally available are not necessarily
+In this paper, we argue that research products that are digitally available are
+often unapproachable in practice (Box 1), because they are not
 friendly for learners and interested parties with different levels of
-experience in the field. This renders research products unapproachable, which
-counteracts availability, and hinders reproducibility short and long term.
-To support long term adoption of reproducible practices in research, research
+experience in the field. Research products that are unapproachable
+counteract availability, and hinder reproducibility short and long term.
+To support long term adoption of reproducible practices in the natural sciences, research
 workflows need to be made approachable for learners, the researchers of the future.
 
-To elaborate on our thesis, we develop a case study from the research field of
+To elaborate on our thesis, we designed a case study from the research field of
 phylogenetics, a discipline within evolutionary biology.
-This case study allowed us to identify barriers that have made research workflows
+We use our case study to identify barriers that have made research workflows
 largely unapproachable to a general audience in the natural sciences.
-Then, we propose some principles for researchers to address these barriers, to
+Then, we propose some principles for researchers to address these barriers, and
 create research workflows that are reproducible by a larger audience.
-
 % ** describe/introduce reproducibility curriculum here
-
 The principles proposed here can be generalized and integrated into the undergraduate
 and graduate school STEM curriculum, either for courses specialized in reproducibility
 or within other subject areas, as a necessary component of successful and impactful science.
@@ -152,18 +149,18 @@ or within other subject areas, as a necessary component of successful and impact
 %%
 %% \noindent\fbox{%
 %%     \parbox{\textwidth}{%
-%%     \textbf{Box 1. The role of accessibility in improving reproducibility.}
+%%     \textbf{Box 1. The role of approachable research workflows in teacing reproducibility.}
 %%       % Availability is defined as the fact or possibility that something can be bought,
 %%       % used, or reached by someone \citep{availability2022cambridge}.
 %%       % Accessibility is defined as "the fact of being able to be reached or obtained easily"
 %%       % \citep{accessibility2022cambridge}
+%%       % Yet, in practice, availability does not imply accessibility.
 %%       Availability and accessibility are conceptually accepted as synonyms for ``the fact
 %%       of being able to be reached" \citep{available-accessible2022cambridge}.
 %%       However, accessibility's definition goes further and describes it as the
 %%       ``fact of being able to be reached \textbf{easily}" \citep{accessibility2022cambridge}.
 %%       A secondary definition of accessibility elaborates more on this: ``the quality
 %%       of being \textbf{easy to understand}''.
-%%       % Yet, in practice, availability does not imply accessibility.
 %%
 %%       What we realize from these definitions is that, in practice, something might
 %%       be available but not necessarily accessible,
@@ -201,101 +198,77 @@ Phylogenetics is a key discipline within evolutionary biology \citep{dobzhansky1
 It focuses on investigating the history of shared ancestry of living and extinct
 organisms using biological data,
 and represents this evolutionary history with a diagram known as a phylogeny
-or phylogenetic tree (because it grows through time and appears to have branches; Figure \ref{fig:tree}).
+or phylogenetic tree (because it grows through time and appears to have branches;
+Figure \ref{fig:tree}).
 Phylogenies provide the basis to study and understand all biological processes
 in an evolutionary context \citep{dobzhansky1973nothing}
 Hence, it appears that improving reproducibility rates in phylogenetics has the
 potential to positively impact research across the natural sciences.
 
-***What other platforms provide resources for reproducibility in phylogenetics???
+To explore barriers to approachability in phylogenetics, we develop a study case
+that touches on three common problems within the field: standardizing
+organism names in phylogenies, obtaining current phylogenetic knowledge for a group of organisms,
+and summarizing this phylogenetic knowledge in a meaningful way.
+To address these problems, we propose a research workflow that relies on resources from the Open
+Tree of Life (OpenTree), an open source project that provides
+digital availability of phylogenetic results from published, peer-reviewed research, which
+is considered as vetted and state-of-the-art knowledge in the field.
+OpenTree phylogenies are stored in a public database, the Phylesystem \citep{mctavish2015phylesystem},
+and are downloadable as various computer-readable file types, which is key for reusability
+and reproducible workflows \citep{CITATION}.
+OpenTree also provides access to a single naming standard for organisms (taxonomic standard)
+that is applied to the stored phylogenies \citep{rees2017automated}, which are
+then used to summarize a single phylogenetic tree encompassing all life \citep{opentreeoflife2019synth}.
 
-The Open Tree of Life project (OpenTree) has developed a computational platform that provides
-digital availability of phylogenetic results from vetted, state-of-the-art research
-in the field \citep{opentreeoflife2019synth}.
-%% by creating a standardized database of phylogenetic data that is used to synthesize
-%% a single phylogenetic tree encompassing all life
-OpenTree's database, the Phylesystem \citep{mctavish2015phylesystem}, stores
-phylogenetic data in a reusable form by applying a single standard to name organisms
-in the stored phylogenies \citep{rees2017automated}.
-%% It also supports digital data obtention in a computer readable format.
+All of OpenTree resources
+%% (the stored phylogenies, the taxonomic standard, the synthetic tree, and all
+%% tools developed to process and summarize stored phylogenies),
+are free of cost to any user, and are available for download and use through its Graphical User
+Interface (aka, a website or application that allows users to access computer functionalities, in this case OpenTree resources, with mouse or keyboard clicks).
+However, reducing as many manual steps as possible in research workflows is key
+for reproducibility, as manual data manipulation scales poorly and is prone to
+error \citep{bakken2019journey}.
+OpenTree's resources are also programmatically available through its Application
+Programming Interface services (APIs; aka computer code that implements computer functionalities,
+in this case OpenTree resources, that can be used by programmers
+to build more functionalities),
+which provide scalability and reproducibility \citep{opentreeAPIv3}.
+However, this comes at a high cost for the user, which requires considerable more
+experience and literacy with computer programming to be able to successfully use APIs.
+%% In recent years, OpenTree API services have been wrapped into software packages for R and Python
+%% \citep{michonneau2016rotl, mctavish2021opentree}, open source, free of cost
+%% programming languages that represent two of the most widely used programming languages
+%% in the sciences \citep{baker2017scientific}. These packages should contribute to making
+%% OpenTree resources more accessible to a wider user audience.
+The R and Python programming languages are open source and free of cost, and represent
+two of the most widely used programming languages in the sciences \citep{baker2017scientific}.
+The rotl R package \citep{michonneau2016rotl} and the OpenTree Python module
+\citep{mctavish2021opentree} are now available as wrappers for OpenTree's API services.
+As such, these packages should contribute to making OpenTree resources more accessible
+to a wider programming user audience.
 
-While this is available through their Graphical User Interface,
-It does not support reproducibility
-
-Accessibility does not imply reproducibility
-
-In order for something to be highly reproducible, it has to be largely accessible.
-
-
-is programmatically
-available free of cost to users through OpenTree's Application Programming Interface
-(API) services \citep{opentreeAPIv3}.
-Additionally, software packages written with open source, free of cost programming
-languages commonly used in scientific research such as R and Python
-\citep{baker2017scientific} have been developed as wrappers that have increased the availability
-of OpenTree's API services, by making the OpenTree API functionalities more accessible
-to a wider user audience \citep{michonneau2016rotl, mctavish2021opentree}.
-Yet, the R and Python OpenTree API wrapper software packages have been mainly used
-by computer-literate individuals
-to seamlessly establish reproducible workflows to use and reuse expert phylogenetic
-knowledge for biological research \citep{sanchez2019datelife, sanchez2021physcraper}
-and education \citep{nguyen2020phylotastic, phylotasticedtools, galacticedtools}.
-In the 5 years since its release, the R package wrapper for OpenTree \texttt{rotl}
-has been cited by more than 190 biological research papers addressing various
-topics \citep{googlerotl}.
-Comparatively, other R packages for phylogenetics, such as \texttt{GGTREE}
-and \texttt{mixOmics}, which were released one year after \texttt{rotl} have been
-cited over a thousand times, which might indicate a delay \texttt{rotl}
-adoption. Of course one potential explanation is that OpenTree services do not have
-as wide an application as services provided by the afore mentioned R packages.
-However, the
-expressed enthusiasm (interest to use/inability to use the resource) by the target
- audience and larger community might point to a different issue.
-%% We need a proper statistical distribution of citation numbers per year, to see
-%% if rotl is an outlier or not.
-
-While learners in the natural sciences have been engaging independently with R
-and Python programming languages
-as they represent two of the most widely used programming languages in the sciences
-% for their fast and seamless statistics and data analysis environment
-\citep{baker2017scientific}, computer programming is not traditionally
+However, while learners in the natural sciences have been engaging independently
+with R and Python programming languages, computer programming is not traditionally
 a core skill formally taught to biologists and naturalists
 \citep{sayres2018bioinformatics, wright2019the, williams2019barriers}.
-Moreover, the main usage of the OpenTree API services hints that tools intended to
-improve availability and reproducibility come at a cost for the potential users:
- an increased required baseline computational knowledge and skillset
-in the field.
 As computers continue to play a larger role in most scientific disciplines \citep{piccolo2016tools},
 higher baseline computational skills are required across all natural sciences.
-% "Thus efforts to increase scientific reproducibility should consider the ubiquity of computers in research."
-
 Thus, efforts to increase reproducibility rates in the natural sciences must consider
-the specifics of scientific workflows that rely on usage of programming languages, such as
-availability and accessibility of data and code \citep{peng2011reproducible, sandve2013ten, powers2019open}.
-% However, the utility of data resources is limited by the technical challenges of accessing the data.
-% In order to motivate reproducible research, that gap needs to be bridged.
-% In this work we focus on improving accessibility of code examples and documentation.
+the specifics of scientific workflows that rely on usage of computer tools and
+programming languages \citep{peng2011reproducible, sandve2013ten, powers2019open}.
 
-We chose a phylogenetics workflow that relies on data and code from OpenTree to
-identify the specific barriers to accessibility it presents.
-Then, we design ways to overcome or diminish these barriers and apply them to
-a series of tutorials and vignettes developed for the OpenTree project.
-The tutorials are available at https://mctavishlab.github.io/R\_OpenTree\_tutorials/.
+In the next section que describe the barriers to approachability that we identified
+on our case study. We addressed these barriers on a teaching material that is
+available at
+https://mctavishlab.github.io/R\_OpenTree\_tutorials/.
 
-Finally, we generalize our findings to suggest a set of
-principles that can be used as a guide to develop code and documentation materials
-with increased accessibility, to improve availability and contribute to reproducibility.
-Notably, these principles can be incorporated as learning goals into any syllabus for a
-course or workshop on best practices for scientific reproducibility.
-% In particular, we identify the necessity for documentation that is written down
-% using language that is common to the target audience to facilitate examination,
-% application, and adoption of code by the wider audience.
+
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=3in]{fig-tree.png}
 \end{center}
-\caption{A phylogenetic tree from our tutorial website, extracted using OpenTree of Life tools and the rotl R package. \label{fig:tree}}
+\caption{A phylogenetic tree from our tutorial. It was extracted using OpenTree of Life resources \citep{opentreeoflife2019synth} wrapped in the \texttt{rotl} R package \citep{michonneau2016rotl}. \label{fig:tree}}
 \end{figure}
 
 \section*{Identifying hurdles to accessibility}
@@ -314,27 +287,37 @@ While this might be important for formal acceptance of the code by the scientifi
 and academic community, it often slows down or even
 obstructs examination, application, and adoption of code by the general audience \citep{ball2017its}.
 
-Vignettes and tutorials work as secondary pieces of documentation, that help to demonstrate
-additional cases of individual function usage, and showcase function associations
-that work for specific analysis workflows in more detail.
-As secondary documentation has become more common practice and is more flexible
-in its form and content, it constitutes an ideal canvas to develop, implement and
-test principles that can overcome current barriers to code accessibility.
+%% Vignettes and tutorials work as secondary pieces of documentation, that help to demonstrate
+%% additional cases of individual function usage, and showcase function associations
+%% that work for specific analysis workflows in more detail.
+%% As secondary documentation has become more common practice and is more flexible
+%% in its form and content, it constitutes an ideal canvas to develop, implement and
+%% test principles that can overcome current barriers to code accessibility.
+
+- programming experience/ skills
+- specialized jargon knowledge
+- use of highly specialized computing jargon and programming techniques;
+
+Some principles of an inclusive syllabus:
+- high cognitive load,
+- unspecified, unclear or lengthy goals;
+- content-focused descriptions instead of user-focused;
+- inflexible learning environment;
+- unapproachable (cold or intimidating) language;
+- and little to no diversity of representation of information
+
 
 \section*{Addressing hurdles to accessibility: some principles}
 \label{sec:addressing}
 
 \subsubsection*{a. Literate programming: Demonstrate code usage with integrative examples}
 
-%% I think I have three different points here:
-%% internalizing knowledge is made easier with active learning practices: learn by doing!
-%% literate programming allows learning by doing AND at the same time provides a story that connects the acquired knowledge to a real worl problem.
-%% By definition, all languages are abstract. We learn them because we grow up with them and they have a direct application for our lives.
-%% Programming languages are no different, however, we start learning those later in life and we do not use them as regularly, making it harder for us to learn them and use them.
+% approachable practice: reduced cognitive load and specific and clear goals
+
 Pedagogical research shows that active learning practices are one the most effective
 ways to take on abstract subjects \citep{freeman2014active}.
-Programming computer languages are quite abstract and learning them can be greatly
-enhanced by applying an active learning strategy such as linking its usage to
+Programming computer languages are quite abstract and cognitive load can be greatly
+reduced for learners by applying an active learning strategy such as linking its usage to
 a ``real world'' or ``human'' application \citep{felder2009active}.
 
 A story-like narrative that links pieces of code together and invites learners
@@ -347,7 +330,7 @@ the code usage, supporting memory and understanding \citep{piccolo2016tools}.
 
 We propose that documents developed with ``literate programming'' can be made more
 accessible by choosing narratives that are relatable to a more general audience.
-An easy way to do this in biology is choosing as model organism a taxon that a
+An easy way to do this in biology is choosing as model organism a charismatic taxon that a
 research group is more interested in studying. For the non-specialized user base,
 a highly charismatic group such as dinosaurs will do the trick.
 
@@ -365,6 +348,8 @@ the application of code to other use cases in biology of interest for the users.
 %% a phylogenetic tree for all lineages within a specific taxonomic rank.
 
 \subsubsection*{b. Demonstrate errors and warnings thoroughly}
+
+% approachable practice: user focused examples (instead of content focus)
 
 A practice that has become more and more widespread in programming-language pedagogical practices
 is the use of typos and mistakes to normalize them for learners, and show them how
@@ -408,6 +393,8 @@ In our tutorial, we focus on explaining the meaning and downstream of warnings a
 
 \subsubsection*{c. Avoid jargon and expert language}
 
+% approachable best practice: friendly and relatable language
+
 Besides avoiding formal language, and incorporating elements of pop culture, such as picture
 character icons known as ``emojis``, to make the language more familiar to a
 broader target audience (see Figure \ref{fig:error}), we made an effort to specifically
@@ -448,17 +435,17 @@ during a workshop.
 \section*{Conclusion}
 \label{sec:conclusion}
 
-Response form the community has been invaluable in gauging success of the tutorials.
+Response form the community has been invaluable in gauging success of our teaching
+materials.
 Senior researchers often comment on the usefulness
-of the tutorials for their research, as well as supporting students in using the
+of the tutorials for their research, as well as how they have supported students in using the
 R packages with less help from them as PIs.
 
 Making accessible reproducible workflows has several advantages:
 
-- save explanation/training time when analyses are run again by students and collaborators;
-- save research time for yourself when analyses are run again with more data, a
-  different dataset, a different organism or biological model;
-- scientific efforts can build off of each other.
+* save explanation/training time when analyses are run again by students and collaborators;
+* save research time for yourself when analyses are run again with more data, a* different dataset, a different organism or biological model;
+* scientific efforts can build off of each other.
 
 
 Ultimately, the long term improvement of reproducibility rates in science will depend
@@ -480,10 +467,10 @@ It will also help close the gap between students that had access to computationa
 resources (and computational training) from an early age and students that did not.
 Late access to computational resources and training can occur due to lack of
 economic resources, often occurring in households from underrepresented communities
-and minorities \citep{REFERENCE-NEEDED}.
+and minorities \citep{google2016diversity, warner2021quantifying}.
 It can also be due to gender-biased parental and community pressures,
 in which male individuals are more often encouraged to perform activities related to computers,
-while female individuals are discouraged \citep{REFERENCE-NEEDED}.
+while female individuals are discouraged \citep{warner2021quantifying}.
 % How to balance software acceptance VS. adoption?
 These principles can be used to improve not only reproducibility practices,
  but also software adoption in the natural sciences.
