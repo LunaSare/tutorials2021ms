@@ -71,7 +71,7 @@ need to be made approachable for learners, the researchers of the future.
 
 Using an example within evolutionary biology, we identify aspects of research workflows
 that make them unapproachable to the general audience:
-use of highly specialized computing jargon and programming techniques;
+use of specialized computing language and programming techniques;
 high cognitive load;
 unspecified, unclear or lengthy goals;
 content-focused descriptions instead of user-focused;
@@ -109,8 +109,8 @@ and future researchers with tools for successful scientific reproducibility.
 Research reproducibility --the extent to which consistent results are obtained when
 a scientific experiment or research workflow is repeated \citep{repdef2021}--
 is a key aspect of the advancement
-of science, as it constitutes a minimum standard that allows understanding research products
-(e.g., methods, data, analysis, results, etc.; \cite{piwowar2013value})
+of science, as it constitutes a minimum standard that allows understanding research products,
+i.e., methods, data, analysis, results, etc. \citep{piwowar2013value},
 to determine their reliability and generality, and eventually build up scientific
 knowledge and applications based on those products
 \citep{king1995replication, peng2011reproducible, powers2019open}.
@@ -191,6 +191,16 @@ or within other subject areas, as a necessary component of successful and impact
 %% }
 %% \bigskip
 
+\bigskip
+\bigskip
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{fig-tree.png}
+\end{center}
+\caption{A phylogenetic tree from our tutorial. It was extracted using OpenTree of Life resources \citep{opentreeoflife2019synth} wrapped in the \texttt{rotl} R package \citep{michonneau2016rotl}. \label{fig:tree}}
+\end{figure}
+
 \section*{A case study from phylogenetics}
 \label{sec:case}
 
@@ -224,12 +234,12 @@ All of OpenTree resources
 %% (the stored phylogenies, the taxonomic standard, the synthetic tree, and all
 %% tools developed to process and summarize stored phylogenies),
 are free of cost to any user, and are available for download and use through its Graphical User
-Interface (aka, a website or application that allows users to access computer functionalities, in this case OpenTree resources, with mouse or keyboard clicks).
+Interface (GUI; aka, a website or application that allows users to access computer functionalities, in this case OpenTree resources, with mouse or keyboard clicks).
 However, reducing as many manual steps as possible in research workflows is key
 for reproducibility, as manual data manipulation scales poorly and is prone to
 error \citep{bakken2019journey}.
 OpenTree's resources are also programmatically available through its Application
-Programming Interface services (APIs; aka computer code that implements computer functionalities,
+Programming Interface services (APIs; aka, computer code that implements computer functionalities,
 in this case OpenTree resources, that can be used by programmers
 to build more functionalities),
 which provide scalability and reproducibility \citep{opentreeAPIv3}.
@@ -240,85 +250,122 @@ computer programming experience and literacy to be able to successfully use APIs
 %% programming languages that represent two of the most widely used programming languages
 %% in the sciences \citep{baker2017scientific}. These packages should contribute to making
 %% OpenTree resources more accessible to a wider user audience.
-The R and Python programming languages are open source and free of cost, and represent
-two of the most widely used programming languages in the sciences today \citep{baker2017scientific}.
-The rotl R package \citep{michonneau2016rotl} and the OpenTree Python module
-\citep{mctavish2021opentree} are now available as wrappers for OpenTree's API services.
-As such, these packages should contribute to making OpenTree resources more accessible
-to a wider programming user audience.
+The \texttt{rotl} R package \citep{michonneau2016rotl} and the \texttt{opentree} Python module
+\citep{mctavish2021opentree} have been developed as wrappers for OpenTree's API services.
+R and Python are open source and free of cost programming languages that represent
+two of the most widely used programming languages in the sciences today \citep{eglen2009quick, baker2017scientific}.
+As such, \texttt{rotl} and \texttt{opentree} software packages should contribute
+to making OpenTree resources more accessible to a wider programming user audience.
 
 However, while learners in the natural sciences have been engaging independently
 with R and Python programming languages, computer programming is not traditionally
 a core skill formally taught to biologists and naturalists
 \citep{sayres2018bioinformatics, wright2019the, williams2019barriers}.
 As computers continue to play a larger role in most scientific disciplines \citep{piccolo2016tools},
-higher baseline computational skills are required across all natural sciences.
-Thus, efforts to increase reproducibility rates in the natural sciences must consider
-the specifics of scientific workflows that rely on usage of computer tools and
-programming languages \citep{peng2011reproducible, sandve2013ten, powers2019open}.
+higher baseline computational skills are required across all natural sciences not only
+to develop an original research workflow, but to be able to follow and reproduce
+research workflows from other researchers.
 
-In the next section que describe the barriers to approachability that we identified
-on our case study. We address these barriers by developing teaching materials that are
+Thus, efforts to increase reproducibility rates long term in the natural sciences
+would benefit from addressing specific barriers for learners in the field, to
+support them in acquiring the skills needed to reproduce research workflows
+that rely heavily on computer code \citep{peng2011reproducible, sandve2013ten, powers2019open}.
+
+In the next section, we describe the barriers to approachable research workflows that we identified
+on our case study. We address these barriers in a set of teaching materials that are
 available at
 https://mctavishlab.github.io/R\_OpenTree\_tutorials/.
 
 
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=3in]{fig-tree.png}
-\end{center}
-\caption{A phylogenetic tree from our tutorial. It was extracted using OpenTree of Life resources \citep{opentreeoflife2019synth} wrapped in the \texttt{rotl} R package \citep{michonneau2016rotl}. \label{fig:tree}}
-\end{figure}
-
 \section*{Identifying barriers to approachable research workflows}
 \label{sec:identifying}
 
+% Cite carpentries and Mosi
 
-Cite carpentries and Mosi
+The main goal of our research workflow is to obtain a single phylogeny summarizing
+data from a set of published phylogenies for the canids (the family of dogs, coyotes, wolves, etc.),
+our organism of study.
+Our analysis can be completely accomplished using functions
+from the R package \texttt{rotl} or the Python module \texttt{opentree}. If
+a researcher were to use this workflow in a publication, they would typically
+describe it in the methodology section as ``The canid summary phylogeny was obtained using
+functions from X package, details are available as supplementary files".
+This is usual practice, mainly because journals do not have space to publish
+all code used in an analysis in the methods section. Yet, supplementary files have
+the misfortune to not be peer-reviewed as thoroughly (or at all) as the main manuscript
+\citep{CITATION}.
+They are also prone to the dreaded promise ``available upon request", which has
+very low rates of fulfillment \citep{CITATION}.
+Without the primary code that was used to perform an analysis it is impossible
+to reproduce said analysis. When the code is available, other issues can
+complicate reproduction of the analysis to the point of completely obstructing
+reproducibility.
+For example, what software do I need to open the code files? Can I run the code within the same
+software, or do I need a different one?
+Do I need additional software that the analysis depends on? What does the code even mean?
 
-Good primary documentation for code is thorough. It describes general usage of individual functions,
-the components and variables a function can take, and it should be accompanied with
-function usage examples on how to apply it \citep{karimzadeh2018top}.
-As opposed to code, primary documentation is written in natural language (i.e.,
-any known human language, e.g., English, Spanish, Chinese).
-Primary documentation is viewed as a key element for success of a piece of code
-\citep{karimzadeh2018top},
-which might be why it is also usually written using highly specialized computational jargon (i.e., computationally specific concepts,
-words, and phrases) as well as formal scientific language.
-While this might be important for formal acceptance of the code by the scientific
-and academic community, it often slows down or even
-obstructs examination, application, and adoption of code by the general audience \citep{ball2017its}.
+These questions are usually addressed in the software documentation.
+As opposed to code, documentation is written in natural language (i.e.,
+any known human language, e.g., English, Spanish, Chinese), and is considered
+a key element for successful adoption of software
+by the target users \citep{karimzadeh2018top}. This might explain
+why documentation for software addressed to academic users is also
+usually written using highly specialized computational
+language or jargon (i.e., computationally specific concepts,
+words, and phrases) as well as formal scientific and academic language.
+\textit{Barrier 1.--} While scientific jargon might have an important role for formal acceptance
+of software by the scientific and academic community, it can be perceived as
+cold and/or intimidating language, that often slows down or even
+obstructs examination, application, and adoption of code by a wider audience \citep{ball2017its},
+and discourages learners by creating a hostile environment that does not foster learning \citep{CITATION}.
 
-%% Vignettes and tutorials work as secondary pieces of documentation, that help to demonstrate
-%% additional cases of individual function usage, and showcase function associations
-%% that work for specific analysis workflows in more detail.
-%% As secondary documentation has become more common practice and is more flexible
-%% in its form and content, it constitutes an ideal canvas to develop, implement and
-%% test principles that can overcome current barriers to code accessibility.
+Good software documentation for code has to be thorough \citep{karimzadeh2018top}.
+It should describe general usage of individual functions, as well as
+the argument and variables said function can take, and it should be accompanied with
+usage examples on how to apply each function \citep{karimzadeh2018top}.
+Individual documentation for each function is usually presented
+in alphabetic order, and does not have a specific goal, besides being as thorough as possible.
+In this context, identifying connections across functions that are meant to work on the same
+analysis workflow is difficult. Moreover, most software has many functions, so documentation
+is usually very lengthy. \textit{Barrier 2.--}  All of this increases the cognitive
+load for the target users and learners, which discourages learners \citep{CITATION}.
+
+Another important aspect of software documentation is that examples are usually
+worked and showcase the ideal or minimal case in which a function should work well.
+\textit{Barrier 3.--} Focusing importance on the content of the software instead
+of considering the user experience, ignoring what can go wrong and avoiding clear
+advice on how to troubleshoot.
+
+Software documentation is usually explained with words, very rarely using diagrams or
+other allegories.
+\textit{Barrier 4.--} Little to no diversity of representation of information
+
+Documentation should always be available for the users and learners
+\textit{Barrier 5.--} Inflexible learning environment, is this one really an issue???
 
 
-Some principles of an inclusive syllabus:
 
-- high cognitive load/ skill level; (literate programming)
 
-- unspecified, unclear or lengthy goals;(literate programming)
+% Some principles of an inclusive syllabus:
 
-- content-focused descriptions instead of user-focused; (demonstrate errors)
+% - unspecified, unclear or lengthy goals; high cognitive load; (literate programming)
 
-- inflexible learning environment; (make it stable so users can learn whenever is best for them)
+% - content-focused descriptions/examples instead of user-focused; (demonstrate errors)
 
-- unapproachable (cold or intimidating) language, use of highly specialized computing jargon; (use friendly and informal but respectful language)
+% - inflexible learning environment; (make it stable so users can learn whenever is best for them)
 
-- and little to no diversity of representation of information (say the same thing with different images, metaphors, stories)
+% - unapproachable (cold or intimidating) language, use of highly specialized computing jargon, skill level; (use friendly and informal but respectful language)
 
+% - and little to no diversity of representation of information (say the same thing with different images, metaphors, stories)
+
+In sum, best practices for good primary documentation are not enough to ensure
+reproducibility of research workflows that rely heavily on code.
 
 \section*{Best practices for approachable research workflows}
 \label{sec:addressing}
 
-\subsubsection*{a. Literate programming: Demonstrate code usage with integrative examples}
-
-% approachable practice: reduced cognitive load and specific and clear goals
+\subsubsection*{a. Reduce cognitive load and provide specific and clear goals
+with literate programming}
 
 Pedagogical research shows that active learning practices are one the most effective
 ways to take on abstract subjects \citep{freeman2014active}.
@@ -326,8 +373,8 @@ Programming computer languages are quite abstract and cognitive load can be grea
 reduced for learners by applying an active learning strategy such as linking its usage to
 a ``real world'' or ``human'' application \citep{felder2009active}.
 
-A story-like narrative that links pieces of code together and invites learners
-to try the code, can lead learners to remember what they are doing and
+A story-like narrative that links code usage in an integrative example, invites learners
+to try the code, which can lead them to remember what they are doing and
 why they are doing it.
 This ``literate programming'' paradigm \citep{knuth1984literate, fritzson2002mathmodelica}
 makes code more approachable, as it integrates narratives with computer code in
@@ -336,8 +383,8 @@ the code usage, supporting memory and understanding \citep{piccolo2016tools}.
 
 We propose that documents developed with ``literate programming'' can be made more
 accessible by choosing narratives that are relatable to a more general audience.
-An easy way to do this in biology is choosing as model organism a charismatic taxon that a
-research group is more interested in studying. For the non-specialized user base,
+An easy way to do this in biology is choosing a charismatic taxon as model organism.
+For a research group this can be the group they are studying. For the general audience,
 a highly charismatic group such as dinosaurs will do the trick.
 
 
@@ -353,9 +400,10 @@ the application of code to other use cases in biology of interest for the users.
 %% use case of obtaining
 %% a phylogenetic tree for all lineages within a specific taxonomic rank.
 
-\subsubsection*{b. Demonstrate errors and warnings thoroughly}
+\subsubsection*{b. Provide examples that are user-focused by demonstrating errors and warnings}
 
 % approachable practice: user focused examples (instead of content focus)
+% demonstrate errors and warnings thoroughly
 
 A practice that has become more and more widespread in programming-language pedagogical practices
 is the use of typos and mistakes to normalize them for learners, and show them how
@@ -397,22 +445,23 @@ In our tutorial, we focus on explaining the meaning and downstream of warnings a
 \caption{Snapshot of a section of the tutorial website, where we demonstrate a common error. \label{fig:error}}
 \end{figure}
 
-\subsubsection*{c. Avoid jargon and expert language}
+\subsubsection*{c. Use friendly, relatable and respectful language}
 
-% approachable best practice: friendly and relatable language
+% avoid specialized, intimidating and cold language
 
 Besides avoiding formal language, and incorporating elements of pop culture, such as picture
 character icons known as ``emojis``, to make the language more familiar to a
 broader target audience (see Figure \ref{fig:error}), we made an effort to specifically
 complement the primary documentation by identifying
 computational concepts that were assumed or were not explained in depth.
-We vetted the tutorials through feedback from workshop participants as well as individual users.
-We choose examples that are charismatic for the audience.
-For example, when we presented the tutorial for a team specialized in Amphibians,
-we tailored the examples using frogs and their allies.
+We vetted the tutorials through feedback from workshop participants as well as
+individual users to identify such specialized concepts.
 
 
-\subsubsection*{d. Make it stable through time}
+
+\subsubsection*{d. Make it accessible geographically and through time}
+
+% - inflexible learning environment; (make it stable so users can learn whenever is best for them)
 
 We published the tutorials on a public, free license, free of cost, and free for
 use and reuse repository and persistent website \citep{RopentreeTutorials}.

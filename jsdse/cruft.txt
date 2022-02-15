@@ -1,3 +1,15 @@
+We choose examples that are charismatic for the audience.
+For example, when we presented the tutorial for a team specialized in Amphibians,
+we tailored the examples using frogs and their allies.
+
+%% Vignettes and tutorials work as secondary pieces of documentation, that help to demonstrate
+%% additional cases of individual function usage, and showcase function associations
+%% that work for specific analysis workflows in more detail.
+%% As secondary documentation has become more common practice and is more flexible
+%% in its form and content, it constitutes an ideal canvas to develop, implement and
+%% test principles that can overcome current barriers to code accessibility.
+
+
 %% I think I have three different points here:
 %% internalizing knowledge is made easier with active learning practices: learn by doing!
 %% literate programming allows learning by doing AND at the same time provides a story that connects the acquired knowledge to a real worl problem.
