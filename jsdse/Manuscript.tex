@@ -37,8 +37,9 @@
   \title{\bf Approachable case studies support learning and reproducibility in data science: An example from evolutionary biology}
   \author{Luna L. Sanchez Reyes\thanks{
     The authors gratefully acknowledge ``Sustaining the Open Tree of Life'',
-    NSF ABI No. 1759838, and ABI No. 1759846. They also acknowledge ``The Carpentries''
-    project, without it this project could not have been possible}\hspace{.2cm}\\
+    NSF ABI No. 1759838, and ABI No. 1759846. They are also also deeply grateful towards
+    ``The Carpentries'' organization; without its invaluable volunteers and resources
+    this project could not have been possible}\hspace{.2cm}\\
     School of Natural Sciences, University of California, Merced\\
     and \\
     Emily Jane McTavish \\
@@ -223,7 +224,7 @@ All of these resources
 %% (the stored phylogenies, the taxonomic standard, the synthetic tree, and all
 %% tools developed to process and summarize stored phylogenies),
 are available for download and use from OpenTree free of cost to any user.
-One way to access OpenTree resources is through it Graphical User
+One way to access OpenTree resources is through its Graphical User
 Interface (GUI; aka, a website or application that allows users to access computer
 functionalities, in this case OpenTree resources, with mouse or keyboard clicks).
 However, reducing as many manual steps as possible in research workflows is key
@@ -348,7 +349,7 @@ and clear advice on how to troubleshoot if needed.
 We identify this as \textit{barrier 3.-- Content-focused examples}.
 Error management training is an approach that focuses on framing mistakes as beneficial
 to learning complex tasks, to give learners the opportunity to
-actively explore a task \citep{frese1995error}.
+actively explore a task with a positive mindset \citep{frese1995error}.
 Providing examples that showcase potential errors supports users performance \citep{steele2014error},
 and can greatly improve learners ability to troubleshoot outside the classroom
 \citep{shannon2015live, nederbragt2020ten}.
@@ -373,7 +374,7 @@ larger audience.
 
 Besides avoiding formal language, and incorporating elements of pop culture, such as picture
 character icons known as ``emojis``, to make the language more familiar to a
-broader target audience (see Figure \ref{fig:error}), we made an effort to specifically
+broader target audience (Figure \ref{fig:error}), we made an effort to specifically
 complement the primary documentation by identifying
 computational concepts that were assumed or were not explained in depth.
 We vetted the tutorials through feedback from workshop participants as well as
@@ -390,7 +391,6 @@ Programming computer languages are by themselves quite abstract and represent a
 learning subject with a potentially high cognitive load for most learners.
 Pedagogical research shows that active learning practices are one of the most effective
 ways to take on abstract subjects \citep{freeman2014active}.
-
 A story-like narrative that links code usage in an integrative example, invites learners
 to try the code, which can lead them to remember what they are doing and
 why they are doing it.
@@ -404,16 +404,19 @@ accessible by choosing narratives that are relatable to a more general audience.
 An easy way to do this in biology is choosing a charismatic taxon as model organism.
 For a research group this can be the group they are studying. For the general audience,
 a highly charismatic group such as dinosaurs will do the trick.
+For example, when we presented our tutorial to the Amphibia Web Organization \citep{van2002amphibiaweb}
+in January 2020, we tailored all examples to frogs and their allies.
+% \citep{cite-aw-workshop}
 
-We examined available primary documentation for the package \texttt{rotl},
-and designed a narrative that required the usage of as many functions as possible.
+We examined available software documentation for the package \texttt{rotl},
+and designed a narrative that requires the usage of as many functions as possible.
 We demonstrate code applications that are commonly requested by OpenTree users,
-but that are not demonstrated in the primary documentation of the R package.
+but that are not demonstrated in the documentation of the package.
 By framing the function workflow using highly requested uses, the documentation acquires a
 narrative arc that is easier to follow and remember by users. This can also facilitate
-the application of code to other use cases in biology of interest for the users.
+translating the code application to other use cases of interest for learners in biology.
 
-%% Maybe Figure!! For the tutorial demonstrated here, we used the commonly requested
+%% Maybe Figure!! In the tutorial showcased here, we used the commonly requested
 %% use case of obtaining
 %% a phylogenetic tree for all lineages within a specific taxonomic rank.
 
@@ -439,32 +442,25 @@ Yet, working through mistakes is rarely done on written pedagogical materials.
 Software documentation focuses on demonstrating usage function with examples that
 work seamlessly, without errors. We argue that the opposite is needed to support
 adoption of reproducible workflows and support long term independence in learners
-and users performance
-\citep{gaspar2007restoring, steele2014error}.
+and users performance \citep{gaspar2007restoring, steele2014error}.
+
 In our tutorials, we apply this principle by demonstrating examples that do not work
 as expected, and exemplifying ways to address them (Figure \ref{fig:error}).
+For example, we identified inputs that would give
+a wide range of warnings and errors. We then focus on providing explanations for
+error and warning messages. We believe this supports users and learners to be less
+intimidated by the messages and practice taking useful information out of it.
+% This is probably part of the computer science curriculum, but it is not at all
+% part of the natural sciences curriculum.
 
-We identified inputs that would give
-a wide range of warnings and errors, and support learners on reading the information
-provided by the message. This
-helps users to not be afraid of errors and warnings, but instead use them as
-an informative measure.
-% This is probably part of the computer science curriculum, but it is not at all part of the natural sciences curriculum.
-We also identify effects of warnings and errors downstream of the workflow.
-
-We identify ways to evaluate inputs to know if they will produce an error, and design
-alternatives on what to do when faced with an error or warning, and demonstrate
-these alternatives.
+We also demonstrate ways to evaluate inputs to determine if they will trigger an
+error or warning, and design and demonstrate alternative analysis routes on what
+to do when faced with an error or warning.
 One of the most essential skills in programming is interpreting and moving forward
 from errors.
-
-In our tutorial, we focus on explaining the meaning of warnings and errors, and
- showcase ways to detect them before they are triggered (i.e., before using an input
-  that would elicit a warning or error). This has two pedagogical benefits:
-1) it provides users/students with the means to troubleshoot their own warnings and errors, and
-2) it allows users/students to understand with more depth what the function is doing.
-
-
+This has two pedagogical benefits. First, it provides users and learners with the
+means to troubleshoot their own warnings and errors. Second, it allows them to
+understand with more depth what the function is doing.
 
 
 
@@ -492,11 +488,13 @@ One key aspect for success of our tutorials is that we applied all rules for
 successful reproducibility, in particular making our tutorials available
 through time in a public website.
 
-Making approachable research workflows has several advantages:
-
-* save explanation/training time when analyses are run again by students and collaborators;
-* save research time for yourself when analyses are run again with more data, a* different dataset, a different organism or biological model;
-* scientific efforts can build off of each other.
+Making approachable research workflows has all the advantages of reproducible research
+workflows.
+It saves explanation/training time when analyses are run again by students and
+collaborators.
+It can also save research time for yourself when analyses are run again with more
+data, a different dataset, a different organism or biological model;
+It contributes to scientific efforts that can build off of each other.
 
 % \citep{roland2002think}
 Ultimately, the long term improvement of reproducibility rates in science will depend
@@ -512,8 +510,8 @@ The principles identified and outlined here can be used to set learning goals an
 outcomes on new reproducibility syllabi.
 
 The principles to create tutorials described here facilitate adoption of software
- and analysis workflows among researchers at different academic levels, from undergrads
-  to established researchers.
+and analysis workflows among researchers at different academic levels, from undergrads
+to established researchers.
 It will also help close the gap between students that had access to computational
 resources (and computational training) from an early age and students that did not.
 Late access to computational resources and training can occur due to lack of
@@ -522,10 +520,8 @@ and minorities \citep{google2016diversity, warner2021quantifying}.
 It can also be due to gender-biased parental and community pressures,
 in which male individuals are more often encouraged to perform activities related to computers,
 while female individuals are discouraged \citep{warner2021quantifying}.
-% How to balance software acceptance VS. adoption?
 These principles can be used to improve not only reproducibility practices,
- but also software adoption in the natural sciences.
-%% Discuss: why address accessibility and not other aspects of reproducibility?
+but also software adoption in the natural sciences.
 
 
 \bigskip
@@ -544,13 +540,15 @@ These principles can be used to improve not only reproducibility practices,
 \end{description}
 
 
-\bigskip
-\bigskip
-\bigskip
+\pagebreak
 
 \begin{center}
 {\large\bf FIGURES}
 \end{center}
+
+\newline
+\newline
+\newline
 
 \begin{figure}
 \begin{center}
@@ -573,6 +571,8 @@ These principles can be used to improve not only reproducibility practices,
 \caption{Snapshot of the home to our tutorial website, showing part of the schedule.
  Our tutorial website was constructed using The Software Carpentries workshop template \citep{swc-workshop-template}. \label{fig:schedule}}
 \end{figure}
+
+\pagebreak
 
 \bibliography{Manuscript-bibliography}
 

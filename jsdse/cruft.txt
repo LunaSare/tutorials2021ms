@@ -1,3 +1,8 @@
+% How to balance software acceptance VS. adoption?
+
+%% Discuss: why address accessibility and not other aspects of reproducibility?
+
+We also identify effects of warnings and errors downstream of the workflow.
 
 
 % Some principles of an inclusive syllabus:
@@ -17,12 +22,6 @@ Many finely honed tutorials do not trigger errors, which precludes helping stude
 to develop the tools to understand and address errors when they do encounter them,
 as they inevitably will.
 
-%% Documentation should always be available for the users and learners
-%% \textit{Barrier 5.--} Inflexible learning environment, is this one really an issue???
-
-We choose examples that are charismatic for the audience.
-For example, when we presented the tutorial for a team specialized in Amphibians,
-we tailored the examples using frogs and their allies \citep{cite-aw-workshop}.
 
 %% Vignettes and tutorials work as secondary pieces of documentation, that help to demonstrate
 %% additional cases of individual function usage, and showcase function associations

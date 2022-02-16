@@ -1,4 +1,7 @@
-\subsubsection*{d. Make it accessible geographically and through time}
+\subsubsection*{e. Make it accessible geographically and through time}
+
+%% Documentation should always be available for the users and learners
+%% \textit{Barrier 5.--} Inflexible learning environment, is this one really an issue???
 
 We published the tutorials on a public, free license, free of cost, and free for
 use and reuse repository and persistent website \citep{RopentreeTutorials}.
