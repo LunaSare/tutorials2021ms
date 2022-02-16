@@ -1,0 +1,18 @@
+\subsubsection*{d. Make it accessible geographically and through time}
+
+We published the tutorials on a public, free license, free of cost, and free for
+use and reuse repository and persistent website \citep{RopentreeTutorials}.
+The tutorial is available for the users to go back to any time they need it,
+and to be shared with other users and learners (Figure \ref{fig:schedule}).
+
+We created a main version of the tutorial that is stable. Any updates to the tutorial are
+published as new versions, or tutorials for new workshops \citep{wilson2006swc, SWCwebsite}
+ Versions presented at workshops are a copy from the original repository.
+They represent a temporally stable snapshot of functions and workflows presented
+during a workshop.
+
+%%% \subsubsection*{5. The (now) classics of computational reproducibility}
+%%%
+%%% Provide all information on package version and system capabilities.
+%%%
+%%% > [name=Emily Jane McTavish]link to where/and how you did that

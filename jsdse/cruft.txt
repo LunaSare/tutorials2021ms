@@ -1,6 +1,28 @@
+
+
+% Some principles of an inclusive syllabus:
+
+% - unspecified, unclear or lengthy goals; high cognitive load; (literate programming)
+
+% - content-focused descriptions/examples instead of user-focused; (demonstrate errors)
+
+% - inflexible learning environment; (make it stable so users can learn whenever is best for them)
+
+% - unapproachable (cold or intimidating) language, use of highly specialized computing jargon, skill level; (use friendly and informal but respectful language)
+
+% - and little to no diversity of representation of information (say the same thing with different images, metaphors, stories)
+
+
+Many finely honed tutorials do not trigger errors, which precludes helping students
+to develop the tools to understand and address errors when they do encounter them,
+as they inevitably will.
+
+%% Documentation should always be available for the users and learners
+%% \textit{Barrier 5.--} Inflexible learning environment, is this one really an issue???
+
 We choose examples that are charismatic for the audience.
 For example, when we presented the tutorial for a team specialized in Amphibians,
-we tailored the examples using frogs and their allies.
+we tailored the examples using frogs and their allies \citep{cite-aw-workshop}.
 
 %% Vignettes and tutorials work as secondary pieces of documentation, that help to demonstrate
 %% additional cases of individual function usage, and showcase function associations
