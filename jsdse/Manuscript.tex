@@ -10,7 +10,7 @@
 
 %\pdfminorversion=4
 % NOTE: To produce blinded version, replace "0" with "1" below.
-\newcommand{\blind}{0}
+\newcommand{\blind}{1}
 
 % DON'T change margins - should be 1 inch all around.
 \addtolength{\oddsidemargin}{-.5in}%
@@ -61,27 +61,25 @@
 \bigskip
 \begin{abstract}
 Research reproducibility is essential for scientific development. Yet, rates of reproducibility
-are low, especially in the natural sciences. As increasingly more research is relying on
-computing tools and software, efforts for improving
+are low, especially in the natural sciences. As increasingly more research relies on
+computers and software, efforts for improving
 reproducibility rates have focused on making available research workflows
 as computer code, as well as raw and processed data in computer readable form.
 However, research products that are digitally available are not necessarily
-friendly for learners and interested parties with little to no %%% different levels of
-experience in the field. This renders research products unapproachable, which
+friendly for learners and interested parties with little to no
+experience in the field. This renders research products unapproachable,
 counteracts availability, and hinders reproducibility short and long term.
 To improve long term adoption of reproducible workflows in research, they
 need to be made approachable for learners, the researchers of the future.
 
 Using a case study within evolutionary biology, we identify aspects of research workflows
 that make them unapproachable to the general audience:
-use of highly specialized language is intimidating;
-unspecified, unclear or lengthy goals lead to high cognitive load;
-content-focused descriptions instead of user-focused; and
-little to no diversity of representation of information.
-Then, we propose a set of principles to improve the unapproachable aspects of
-research workflows, and illustrate their application in a case study from
-evolutionary biology that we used as teaching material.
-Finally, we elaborate on the general application of these principles for
+use of highly specialized language;
+unclear goals and high cognitive load; and
+content-focused descriptions.
+We propose a set of principles to improve the unapproachable aspects of
+research workflows, and illustrate their application in a tutorial.
+We elaborate on the general application of these principles for
 documenting research workflows and products, to provide present learners
 and future researchers with tools for successful scientific reproducibility.
 %> ** add a sentence on implications for teaching reproducibility
@@ -90,15 +88,15 @@ and future researchers with tools for successful scientific reproducibility.
 %% Projects that address availability of code and data in the natural sciences
 %% have focused on producing documentation that describes the nature and usage of the
 %% resources.
-%% However, it is often written using highly specialized language that is largely
+%% However, it often communicates in a highly specialized language that is largely
 %% inaccessible for the average target user. Additionally, baseline
-%% computational knowledge and skills required to access scientific results are often
+%% computational knowledge and required skills to access scientific results are often
 %% not found among potential users, and keep on increasing.
 
 \end{abstract}
 
 \noindent%
-{\it Keywords:}  open science, R, phylogenetics, Open Tree of Life, pedagogy
+{\it Keywords:}  open science, R programming language, phylogenetics, Open Tree of Life, pedagogy
 \vfill
 
 \newpage
@@ -204,6 +202,13 @@ Phylogenies provide the basis to study and understand all biological processes
 in an evolutionary context \citep{dobzhansky1973nothing}.
 Hence, it appears that improving reproducibility rates in phylogenetics has the
 potential to positively impact research across the natural sciences.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{fig-tree.png}
+\end{center}
+\caption{A phylogenetic tree from our tutorial. It was extracted using OpenTree of Life resources \citep{opentreeoflife2019synth} wrapped in the \texttt{rotl} R package \citep{michonneau2016rotl}. \label{fig:tree}}
+\end{figure}
 
 To explore barriers to approachable phylogenetics, we develop a case study
 that touches on three common problems within the field: standardizing
@@ -354,12 +359,12 @@ Providing examples that showcase potential errors supports users performance \ci
 and can greatly improve learners ability to troubleshoot outside the classroom
 \citep{shannon2015live, nederbragt2020ten}.
 
-Last but not least, software documentation is usually explained verbally in a document, very
-rarely is it approached using diagrams or other allegories.
-We recognize this as \textit{barrier 4.-- Little to no diversity of representation of information}.
+%% Last but not least, software documentation is usually explained verbally in a document, very
+%% rarely is it approached using diagrams or other allegories.
+%% We recognize this as \textit{barrier 4.-- Little to no diversity of representation of information}.
 
 In sum, best practices for good software documentation are not enough to promote
-reproducibility of research workflows that rely heavily on code. In the following
+reproducibility of published research workflows that rely heavily on code. In the following
 section we describe some principles that can help to reduce or remove the
 identified barriers, to create
 research workflows that are more approachable and hence more reproducible by a
@@ -380,6 +385,12 @@ computational concepts that were assumed or were not explained in depth.
 We vetted the tutorials through feedback from workshop participants as well as
 individual users to identify such specialized concepts.
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{fig-error.png}
+\end{center}
+\caption{Snapshot of a section of the tutorial website, where we demonstrate a common error. \label{fig:error}}
+\end{figure}
 
 \subsubsection*{Principle 2. Reduce cognitive load by providing specific and clear goals
 with literate programming}
@@ -464,14 +475,11 @@ understand with more depth what the function is doing.
 
 
 
-\subsubsection*{Principle 4. Demonstrate one thing in different ways}
+% \subsubsection*{Principle 4. Demonstrate one thing in different ways}
 
 % - and little to no diversity of representation of information (say the same thing with different images, metaphors, stories)
 
-%We designed ways to access the different elements of the outputs.
-
-
-
+% We designed ways to access the different elements of the outputs.
 
 
 
@@ -482,14 +490,30 @@ Response from the community has been invaluable in gauging success of our teachi
 materials.
 Senior researchers often comment on the usefulness
 of the tutorials for their research, as well as how they have supported students in using the
-R packages with less help from them as PIs.
+R packages more independently.
 
-One key aspect for success of our tutorials is that we applied all rules for
-successful reproducibility, in particular making our tutorials available
-through time in a public website.
+When developing our tutorials, we not only applied the principles elaborated here,
+but we followed basic recommendations for successful reproducibility \citep{sandve2013ten}.
+For example, we published the tutorials on a public, free license, free of cost, and free for
+use and reuse repository and persistent website \citep{RopentreeTutorials}.
+We also created a main version of the tutorial that is stable. Any updates to the tutorial are
+then published as new versions, or tutorials for new workshops \citep{wilson2006swc, SWCwebsite}
+Versions presented at workshops are a copy from the original repository, and
+constitute a temporally stable snapshot of functions and workflows presented
+during a workshop.
+This ensures that the tutorials are available for the users to return to any time
+they need it, and to be shared with other users and learners (Figure \ref{fig:schedule}).
 
-Making approachable research workflows has all the advantages of reproducible research
-workflows.
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{fig-schedule.png}
+\end{center}
+\caption{Snapshot of the home to our tutorial website, showing part of the schedule.
+ Our tutorial website was constructed using The Software Carpentries workshop template \citep{swc-workshop-template}. \label{fig:schedule}}
+\end{figure}
+
+We note that making approachable research workflows has all the advantages of
+reproducible research workflows.
 It saves explanation/training time when analyses are run again by students and
 collaborators.
 It can also save research time for yourself when analyses are run again with more
@@ -497,17 +521,20 @@ data, a different dataset, a different organism or biological model;
 It contributes to scientific efforts that can build off of each other.
 
 % \citep{roland2002think}
-Ultimately, the long term improvement of reproducibility rates in science will depend
-on our ability to intentionally integrate reproducibility into the
-undergraduate curriculum, so college learners and future researchers have the
-basis to develop the fundamental skills needed to successfully create reproducible
-scientific workflows and materials.
-
-Some universities have been incorporating the subject in their classes (see
-\cite{uwlibraries2022, nigms2022}).
-The focus of these resources has been for students to develop skills to document their work.
+Some universities have been incorporating reproducibility in their curriculum
+\citep{uwlibraries2022, nigms2022}.
+The focus of these resources has been for students to acquire and practice skills
+to document their work.
 The principles identified and outlined here can be used to set learning goals and
-outcomes on new reproducibility syllabi.
+outcomes for new reproducibility syllabi.
+Ultimately, the long term improvement of reproducibility rates in science will depend
+on our ability to intentionally integrate best practices for achieving reproducibility
+into the educational framework of future data scientists \citep{nasem2018data}.
+Inclusion of reproducibility into the data acumen of undergraduate curriculum will
+provide college learners and future researchers with the tools to develop
+the fundamental skills needed to successfully create reproducible scientific workflows
+and research products.
+
 
 The principles to create tutorials described here facilitate adoption of software
 and analysis workflows among researchers at different academic levels, from undergrads
@@ -538,41 +565,6 @@ but also software adoption in the natural sciences.
 \item[Website link:] \url{https://mctavishlab.github.io/R_OpenTree_tutorials}
 
 \end{description}
-
-
-\pagebreak
-
-\begin{center}
-{\large\bf FIGURES}
-\end{center}
-
-\newline
-\newline
-\newline
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=3in]{fig-tree.png}
-\end{center}
-\caption{A phylogenetic tree from our tutorial. It was extracted using OpenTree of Life resources \citep{opentreeoflife2019synth} wrapped in the \texttt{rotl} R package \citep{michonneau2016rotl}. \label{fig:tree}}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=3in]{fig-error.png}
-\end{center}
-\caption{Snapshot of a section of the tutorial website, where we demonstrate a common error. \label{fig:error}}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=3in]{fig-schedule.png}
-\end{center}
-\caption{Snapshot of the home to our tutorial website, showing part of the schedule.
- Our tutorial website was constructed using The Software Carpentries workshop template \citep{swc-workshop-template}. \label{fig:schedule}}
-\end{figure}
-
-\pagebreak
 
 \bibliography{Manuscript-bibliography}
 

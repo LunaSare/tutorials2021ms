@@ -3,16 +3,7 @@
 %% Documentation should always be available for the users and learners
 %% \textit{Barrier 5.--} Inflexible learning environment, is this one really an issue???
 
-We published the tutorials on a public, free license, free of cost, and free for
-use and reuse repository and persistent website \citep{RopentreeTutorials}.
-The tutorial is available for the users to go back to any time they need it,
-and to be shared with other users and learners (Figure \ref{fig:schedule}).
 
-We created a main version of the tutorial that is stable. Any updates to the tutorial are
-published as new versions, or tutorials for new workshops \citep{wilson2006swc, SWCwebsite}
- Versions presented at workshops are a copy from the original repository.
-They represent a temporally stable snapshot of functions and workflows presented
-during a workshop.
 
 %%% \subsubsection*{5. The (now) classics of computational reproducibility}
 %%%
