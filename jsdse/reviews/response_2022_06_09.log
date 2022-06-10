@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.8)  10 JUN 2022 00:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.8)  10 JUN 2022 01:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -469,20 +469,20 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 130.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/luna/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [2] [3] (./response_2022_06_09.aux) ) 
+) [2] [3] [4] (./response_2022_06_09.aux) ) 
 Here is how much of TeX's memory you used:
- 13190 strings out of 478293
- 210736 string characters out of 5842978
+ 13197 strings out of 478293
+ 210800 string characters out of 5842978
  538281 words of memory out of 5000000
  31121 multiletter control sequences out of 15000+600000
- 494770 words of font info for 74 fonts, out of 8000000 for 9000
+ 495005 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,6n,81p,1016b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/luna/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</Users/luna/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/luna/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/luna/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on response_2022_06_09.pdf (3 pages, 89515 bytes).
+Output written on response_2022_06_09.pdf (4 pages, 92782 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
+ 44 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
  12289 words of extra memory for PDF output out of 14400 (max. 10000000)
 

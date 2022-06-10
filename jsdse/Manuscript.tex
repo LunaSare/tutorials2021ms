@@ -94,12 +94,12 @@ A standard for reproducibility that has received much attention is availability,
 
 In this paper, we argue that research products that are digitally available are often unapproachable in practice, because they are not friendly for learners and interested parties with different levels of experience in the field.
 Research products that are unapproachable counteract availability, and hinder reproducibility short and long term.
-To support long term adoption of reproducible practices in the natural sciences, research workflows need to be made approachable for learners, the researchers of the future \citep{roland2002think}.
+To support long term adoption of reproducible practices in the natural sciences, research workflows need to be made approachable for learners, the researchers of the future \citep{roland2002think, nasem2018data}.
 
 To elaborate on our thesis, we designed a case study within the research field of phylogenetics, a discipline within evolutionary biology.
 We use our case study to identify barriers that have made research workflows largely unapproachable to a general audience in the natural sciences.
 Then, we propose some principles for researchers to address these barriers, and create research workflows that are reproducible by a larger audience.
-% ** describe/introduce reproducibility curriculum here
+% ** describe/introduce reproducibility curriculum here:
 The principles proposed here can be generalized and integrated into the undergraduate and graduate school STEM curriculum, either for courses specialized in reproducibility or within other subject areas, as a necessary component of successful and impactful science.
 
 %% \bigskip
@@ -189,7 +189,7 @@ R and Python are open source and free of cost, and represent two of the most wid
 As such, \texttt{rotl} and \texttt{opentree} software packages should contribute to making OpenTree resources more accessible to a wider programming user audience.
 
 However, while learners in the natural sciences have been engaging independently with R and Python programming languages, computer programming is not traditionally a core skill formally taught to biologists and naturalists \citep{sayres2018bioinformatics, wright2019the, williams2019barriers}.
-As computers continue to play a larger role in most scientific disciplines \citep{piccolo2016tools}, higher baseline computational skills are required across all natural sciences not only to develop an original research workflow, but to be able to follow and reproduce research workflows from other researchers.
+As computers continue to play a larger role in most scientific disciplines \citep{piccolo2016tools}, higher baseline computational skills are required across all natural sciences not only to develop an original research workflow, but to be able to follow and reproduce research workflows from other researchers \citep{nasem2019reproducibility}.
 
 Thus, efforts to increase reproducibility rates long term in the natural sciences would benefit from addressing specific barriers for learners in the field, to support them in acquiring the skills needed to reproduce research workflows that rely heavily on computer code \citep{peng2011reproducible, sandve2013ten, powers2019open}.
 
@@ -207,7 +207,7 @@ All analysis for our case study can be completely accomplished using functions f
 If a researcher were to use the proposed analysis workflow in a publication, they would typically describe it in the methodology section as ``The canid summary phylogeny was obtained using functions from X package, details are available as supplementary files".
 This is usual practice, mainly because journals do not have space to publish all code used for an analysis in the methods section. Yet, supplementary files and data have the misfortune to not be peer-reviewed as thoroughly (or at all) as the main manuscript \citep{pop2015use}.
 They are also prone to the dreaded promise ``available upon request", which has very low rates of fulfillment \citep{krawczyk2012available}.
-Without the primary data and code that was used to perform an analysis it is impossible to reproduce said analysis \citep{miyakawa2020no}. When the code is available, other issues can complicate reproduction of the analysis, to the point of completely obstructing reproducibility.
+Without the primary data and code that was used to perform an analysis, it is impossible to reproduce said analysis \citep{miyakawa2020no}. When the code is available, other issues can complicate reproduction of the analysis, to the point of completely obstructing reproducibility.
 For example, some questions that are often unaddressed in research workflows are:
 \textit{what software do I need to open the code files?}
 \textit{Can I run the code with the same software I used to open the files, or do I need a different one?}
@@ -236,7 +236,7 @@ Perfectly worked examples ignore the user experience by maintaining focus on the
 We identify this as \textit{barrier 3.-- Content-focused examples}.
 Error management training is an approach that focuses on framing mistakes as beneficial to learning complex tasks, to give learners the opportunity to
 actively explore a task with a positive mindset \citep{frese1995error}.
-Providing examples that showcase potential errors supports user's performance \citep{steele2014error}, and can greatly improve learner's ability to troubleshoot outside the classroom \citep{shannon2015live, nederbragt2020ten}.
+Providing examples that showcase potential errors, supports user's performance \citep{steele2014error}, and can greatly improve learner's ability to troubleshoot outside the classroom \citep{shannon2015live, nederbragt2020ten}.
 
 %% Last but not least, software documentation is usually explained verbally in a document, very
 %% rarely is it approached using diagrams or other allegories.
@@ -360,12 +360,10 @@ The principles identified and outlined here can be used to set learning goals an
 Ultimately, the long term improvement of reproducibility rates in science will depend on our ability to intentionally integrate best practices for achieving reproducibility into the educational framework of future data scientists \citep{nasem2018data}.
 Inclusion of reproducibility into the data acumen of undergraduate curriculum will provide college learners and future researchers with the tools to develop the fundamental skills needed to successfully create reproducible scientific workflows and research products.
 
-
-The principles to create tutorials described here facilitate adoption of software and analysis workflows among researchers at different academic levels, from undergrads to established researchers.
-It will also help close the gap between students that had access to computational resources (and computational training) from an early age and students that did not.
-Late access to computational resources and training can occur due to lack of economic resources, often occurring in households from underrepresented communities and minorities \citep{google2016diversity, warner2021quantifying}.
-It can also be due to gender-biased parental and community pressures, in which male identifying individuals are more often encouraged to perform activities related to computers, while female identifying individuals are discouraged, starting from as early as elementray school \citep{master_gender_2021}.
-These principles can be used to improve not only reproducibility practices, but also software adoption in the natural sciences.
+The principles described here are relevant to facilitate adoption of software and analysis workflows among researchers at different academic levels, from undergrads to established researchers.
+They can also help close the academic gap that is generated by uneven access to computational resources across students belonging to different groups \citep{kewalramani2018student}, where the most affected learners usually belong to underrepresented minorities and rural areas \citep{warner2021quantifying}.
+Differences in access can also be due to gender-biased parental and community pressures, in which male identifying individuals are more likely to be encouraged to perform activities related to computers \citep{google2016diversity}, while female identifying individuals are discouraged, starting from as early as elementray school \citep{master_gender_2021}.
+These principles can be used to improve not only reproducibility practices, but also ease adoption of computational resources in the natural sciences.
 
 
 \bigskip
