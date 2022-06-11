@@ -60,16 +60,16 @@
 
 \bigskip
 \begin{abstract}
-Research reproducibility is essential for scientific development. Yet, rates of reproducibility are low, especially in the natural sciences.
+Research reproducibility is essential for scientific development. Yet, rates of reproducibility are low.
 As increasingly more research relies on computers and software, efforts for improving reproducibility rates have focused on making research products digitally available, such as publishing analysis workflows as computer code, and raw and processed data in computer readable form.
 However, research products that are digitally available are not necessarily friendly for learners and interested parties with little to no experience in the field.
 This renders research products unapproachable, counteracts their availability, and hinders scientific reproducibility.
-To improve both short and long term adoption of reproducible practices in research, research products need to be made approachable for learners, the researchers of the future.
+To improve both short and long term adoption of reproducible scientific practices, research products need to be made approachable for learners, the researchers of the future.
 
 Using a case study within evolutionary biology, we identify aspects of research workflows that make them unapproachable to the general audience:
 use of highly specialized language;
 unclear goals and high cognitive load; and
-content-focused descriptions.
+lack of trouble-shooting examples.
 We propose a set of principles to improve the unapproachable aspects of research workflows, and illustrate their application using an online teaching resource.
 We elaborate on the general application of these principles for documenting not only research products but also teaching materials, to provide present learners and future researchers with tools for successful scientific reproducibility.
 %> ** add a sentence on implications for teaching reproducibility
@@ -166,34 +166,31 @@ Hence, it follows that improving reproducibility rates in phylogenetics has the 
 
 To explore barriers to approachable phylogenetics, we develop a case study that touches on three common problems within the field: standardizing organism names in phylogenies, obtaining current phylogenetic knowledge for a group of organisms, and summarizing this phylogenetic knowledge in a meaningful way.
 To address these problems, we propose a research workflow that relies on resources from the Open Tree of Life (OpenTree), an open source project that provides digital availability of phylogenetic results from published, peer-reviewed research, which is considered as vetted and state-of-the-art knowledge in the field.
-OpenTree phylogenies are stored in a public database, the Phylesystem \citep{mctavish2015phylesystem}, and are downloadable as various computer-readable file types, which is key for reusability and reproducible workflows \citep{wilson2017good}.
+OpenTree phylogenies are stored in a public database, the Phylesystem \citep{mctavish2015phylesystem}, and are downloadable as various computer-readable file types, which is key for reusable and reproducible workflows \citep{wilson2017good}.
 OpenTree also provides access to a single standard for organism names (taxonomic standard) that is applied to the stored phylogenies \citep{rees2017automated}, which are then used to summarize a single phylogenetic tree encompassing all life \citep{opentreeoflife2019synth}.
 
 All of these resources
 %% (the stored phylogenies, the taxonomic standard, the synthetic tree, and all
 %% tools developed to process and summarize stored phylogenies),
-are available for download and use from OpenTree free of cost to any user.
-One way to access OpenTree resources is through its Graphical User Interface (GUI; aka, a website or application that allows users to access and use functionalities with mouse or keyboard clicks).
+are available for download and use from OpenTree, free of financial cost to any user.
+One way to access OpenTree resources is manually, through its Graphical User Interface (GUI; aka, a website or application that allows users to access and use functionalities with mouse or keyboard clicks).
 However, reducing as many manual steps as possible in research workflows is key for reproducibility, as manual data manipulation scales poorly and is prone to error \citep{bakken2019journey}.
-OpenTree's resources are also programmatically available through its Application Programming Interface services (APIs; aka, computer code that implements computer functionalities, in this case OpenTree resources, that can be used by programmers
-to build more functionalities), which provide scalability and reproducibility \citep{opentreeAPIv3}.
-However, this comes at a high cost for the user, which requires considerably more computer programming experience and literacy to be able to successfully use APIs.
+OpenTree's resources are also programmatically available through its Application Programming Interface services (APIs; aka, computer code that automatically implements functionalities, that is usually used by programmers to build different or tailored functionalities). While APIs provide data processing scalability and reproducibility \citep{opentreeAPIv3}, they come at a high technical and cognitive cost for the user, whom requires considerably more computer programming experience and literacy to be able to successfully utilize APIs.
 %% In recent years, OpenTree API services have been wrapped into software packages for R and Python
 %% \citep{michonneau2016rotl, mctavish2021opentree}, open source, free of cost
 %% programming languages that represent two of the most widely used programming languages
 %% in the sciences \citep{baker2017scientific}. These packages should contribute to making
 %% OpenTree resources more accessible to a wider user audience.
-The \texttt{rotl} R package \citep{michonneau2016rotl} and the \texttt{opentree} Python module \citep{mctavish2021opentree} have been developed to wrap OpenTree's API services
-and make them available through the R and Python programming languages.
-R and Python are open source and free of cost, and represent two of the most widely used programming languages in the sciences today \citep{eglen2009quick, baker2017scientific}.
-As such, \texttt{rotl} and \texttt{opentree} software packages should contribute to making OpenTree resources more accessible to a wider programming user audience.
+OpenTree's API services have been wrapped by the \texttt{rotl} R package \citep{michonneau2016rotl} and the \texttt{opentree} Python module \citep{mctavish2021opentree}.
+R and Python programming languages are open source and free of cost, and represent two of the most widely used programming languages in the sciences today \citep{eglen2009quick, baker2017scientific}.
+As such, \texttt{rotl} and \texttt{opentree} software packages are contributing to approachability of OpenTree's resources to R and Python users, increasing availability to a wider user base.
 
 However, while learners in the natural sciences have been engaging independently with R and Python programming languages, computer programming is not traditionally a core skill formally taught to biologists and naturalists \citep{sayres2018bioinformatics, wright2019the, williams2019barriers}.
 As computers continue to play a larger role in most scientific disciplines \citep{piccolo2016tools}, higher baseline computational skills are required across all natural sciences not only to develop an original research workflow, but to be able to follow and reproduce research workflows from other researchers \citep{nasem2019reproducibility}.
 
 Thus, efforts to increase reproducibility rates long term in the natural sciences would benefit from addressing specific barriers for learners in the field, to support them in acquiring the skills needed to reproduce research workflows that rely heavily on computer code \citep{peng2011reproducible, sandve2013ten, powers2019open}.
 
-In the next section, we describe (in no particular order) the barriers to approachable research workflows that we identified on our case study.
+In the next section, we describe (in no particular order) three barriers to approachable research workflows that we identify using our case study.
 Then we develop a set of principles to address these barriers, and apply the latter to a set of teaching materials that are available at https://mctavishlab.github.io/R\_OpenTree\_tutorials/.
 
 
@@ -202,19 +199,20 @@ Then we develop a set of principles to address these barriers, and apply the lat
 
 % Cite carpentries and Mosi
 
-The main goal of our case study is to obtain a single phylogeny summarizing data from a set of published phylogenies for the canids (the family of dogs, coyotes, wolves, etc.), our organism of study.
+The main goal of our case study is to obtain a single phylogeny summarizing data from a set of published phylogenies for the canids (the family of dogs, coyotes, wolves, etc.), our organisms of study.
 All analysis for our case study can be completely accomplished using functions from the R package \texttt{rotl} or the Python module \texttt{opentree}.
 If a researcher were to use the proposed analysis workflow in a publication, they would typically describe it in the methodology section as ``The canid summary phylogeny was obtained using functions from X package, details are available as supplementary files".
 This is usual practice, mainly because journals do not have space to publish all code used for an analysis in the methods section. Yet, supplementary files and data have the misfortune to not be peer-reviewed as thoroughly (or at all) as the main manuscript \citep{pop2015use}.
-They are also prone to the dreaded promise ``available upon request", which has very low rates of fulfillment \citep{krawczyk2012available}.
+They are also prone to the dreaded promise ``available upon request", which has very low rates of fulfillment \citep{krawczyk2012available, gabelica2022many}.
 Without the primary data and code that was used to perform an analysis, it is impossible to reproduce said analysis \citep{miyakawa2020no}. When the code is available, other issues can complicate reproduction of the analysis, to the point of completely obstructing reproducibility.
 For example, some questions that are often unaddressed in research workflows are:
-\textit{what software do I need to open the code files?}
-\textit{Can I run the code with the same software I used to open the files, or do I need a different one?}
+\textit{what software do I need to read the code files?}
+\textit{What software can I use to actually run the code?}
 \textit{Do I need additional software that the analysis depends on?}
+\textit{What software versions ere used?}
 \textit{What does the code even mean?}
 
-These questions can usually be answered by referring to the software documentation, which are usually publicly available and can be accessed by any potential user.
+Some of these questions can be answered by referring to the software documentation, which is usually publicly available and can be accessed by any potential user.
 As opposed to code, software documentation is written in natural language (i.e., any known human language, e.g., English, Spanish, Chinese), and is considered a key element for successful adoption of software by target users \citep{karimzadeh2018top}. This might explain why documentation for software addressed to academic users is also usually written using highly specialized computational language or jargon (i.e., computationally specific concepts, words, and phrases) as well as formal scientific and academic language.
 We identify this as \textit{barrier 1} to approachable research workflows.-- \textit{Specialized language is intimidating}.
 While scientific jargon might have an important role for formal acceptance of software by the scientific and academic community, it can be perceived as cold and/or intimidating language, that often slows down or even obstructs examination, application, and adoption of code by a wider audience \citep{ball2017its}.
@@ -233,9 +231,8 @@ High cognitive load is know to have a negative effect in learning software \cite
 A third important aspect of software documentation are examples that demonstrate usage of individual functions \citep{karimzadeh2018top}.
 Examples presented in software documentation are usually worked to perfection, as they are intended to showcase the ideal or minimal case in which a function works well.
 Perfectly worked examples ignore the user experience by maintaining focus on the software content, and fail to provide users with expert and clear advice on how to troubleshoot if needed.
-We identify this as \textit{barrier 3.-- Content-focused examples}.
-Error management training is an approach that focuses on framing mistakes as beneficial to learning complex tasks, to give learners the opportunity to
-actively explore a task with a positive mindset \citep{frese1995error}.
+We identify this as \textit{barrier 3.-- Lack of trouble-shooting examples}.
+Error management training is an approach that focuses on framing mistakes as beneficial to learning complex tasks, to give learners the opportunity to actively explore a task with a positive mindset \citep{frese1995error}.
 Providing examples that showcase potential errors, supports user's performance \citep{steele2014error}, and can greatly improve learner's ability to troubleshoot outside the classroom \citep{shannon2015live, nederbragt2020ten}.
 
 %% Last but not least, software documentation is usually explained verbally in a document, very
@@ -252,7 +249,7 @@ In the following section we describe some principles that can help to reduce or 
 
 % avoid specialized, intimidating and cold language
 
-Avoiding formal language, and incorporating elements of pop culture, such as picture character icons known as ``emojis``, make the language more familiar to a broader target audience (Figure \ref{fig:error}). We made an effort to specifically complement the primary documentation by identifying computational concepts that were assumed or were not explained in depth.
+Avoiding formal language, and incorporating elements of pop culture, such as picture character icons known as ``emojis", make the language more familiar to a broader target audience (Figure \ref{fig:error}). We made an effort to specifically complement the primary documentation by identifying computational concepts that were assumed or were not explained in depth.
 We vetted the tutorials through feedback from workshop participants as well as individual users to identify such specialized concepts.
 
 \begin{figure}
@@ -296,7 +293,7 @@ One benefit of this practice is that typos and mistakes occur, normalizing them 
 Watching an instructor handling errors, demonstrates learners on how to solve them when they are outside the classroom \citep{shannon2015live, nederbragt2020ten}.
 When co-author McTavish was a postdoc, teaching an introductory programming workshop as a volunteer with the Carpentries (a non-profit group that teaches foundational coding and data science skills to researchers worldwide) \citep{wilson2006swc, SWCwebsite},
 a senior faculty member taking the workshop complained that the typos were slowing things down and interfering with the pedagogy.
-McTavish replied "the typos ARE the pedagogy".
+McTavish replied ``the typos ARE the pedagogy".
 This has become a slogan of sorts at the Carpentries, capturing the idea that embracing and discussing mistakes is essential to teaching programming \citep{wilson2019teaching}.
 Yet, working through mistakes is rarely done on written pedagogical materials.
 Software documentation focuses on demonstrating usage function with examples that work seamlessly, without errors.
@@ -313,7 +310,7 @@ We also demonstrate ways to evaluate inputs to determine if they will trigger an
 One of the most essential skills in programming is interpreting and moving forward from errors.
 This has two pedagogical benefits.
 First, it provides users and learners with the means to troubleshoot their own warnings and errors.
-Second, it allows them to understand with more depth what the function is doing.
+Second, it allows them to understand with more depth what the code is doing.
 
 
 
@@ -329,15 +326,21 @@ Second, it allows them to understand with more depth what the function is doing.
 \label{sec:conclusion}
 
 Response from the community has been invaluable in gauging success of our teaching materials.
-Senior researchers often comment on the usefulness of the tutorials for their research, as well as how they have supported students in using the demosntrated R packages more independently.
+Senior researchers often comment on the usefulness of the tutorials for their research, as well as how they have supported students in using the demonstrated R packages more independently.
+We note that making approachable research workflows has all the advantages of reproducible research workflows.
+It saves time during explanation and training, when analyses are run by new collaborators and students.
+It can also save research time for yourself, when analyses are run again with more data, a different dataset, a different organism or biological model.
+It contributes to making scientific efforts that can build off of each other.
 
-When developing our tutorials, we not only applied the principles elaborated here,
+When developing our tutorials, we not only applied the principles elaborated here to make them more approachable,
 but we followed basic recommendations for successful reproducibility \citep{sandve2013ten}.
 For example, we published the tutorials on a persistent and public website \citep{RopentreeTutorials} that adheres to the four r's of openness, by being free license, free of cost, and thus free for use, reuse, redistribute, revise and remix \citep{hilton2010four}.
 To make the website persistent, any updates to the tutorial are published as new versions.
 Versions presented at workshops are a copy from the original repository, and constitute a temporally stable snapshot of functions and workflows presented during a live workshop \citep{wilson2006swc, SWCwebsite}.
 This ensures that the tutorials are available for the users to return to any time they need it, and to be shared with other users and learners (Figure \ref{fig:schedule}).
-This approach not only teaches reproducibility, but also makes the teaching process itself reproducibile \citep{dogucu_tools_2022}.
+Finally, we dedicate a section of the tutorial to document the software versions that are demonstrated throughout. 
+A common issue in open source software packages written in R and Python is the deprecation of functions (i.e., functions that are no longer reccommended or maintained, and that are in the process of being phased out and replaced by new ones; \citealt{deprecation2017, vadlamani2021apiscanner}). Running code that has fallen victim to deprecation require considerable programming savvy, and it is a task that is hard even for experienced programmers \citep{vadlamani2021apiscanner}. Yet, old versions of open source software packages remain digitally accessible, and persist in time. If a package version is known, an analysis can be reproduced without investing additional resources in finding the appropriate functions to run it, even long time after a function had been deprecated. 
+Applying these principles in a tutorial not only teaches reproducibility, but also makes the teaching process itself reproducible \citep{dogucu_tools_2022}.
 
 \begin{figure}
 \begin{center}
@@ -347,10 +350,9 @@ This approach not only teaches reproducibility, but also makes the teaching proc
  Our tutorial website was constructed using the software workshop template from the Carpentries \citep{swc-workshop-template}. \label{fig:schedule}}
 \end{figure}
 
-We note that making approachable research workflows has all the advantages of reproducible research workflows.
-It saves time during explanation and training, when analyses are run by new collaborators and students.
-It can also save research time for yourself, when analyses are run again with more data, a different dataset, a different organism or biological model.
-It contributes to scientific efforts that can build off of each other.
+Incorporating the principles described here into teaching resources not onlu improves reproducibility practices, but it should facilitate adoption of software and analysis workflows in the natural sciences, among researchers at different academic levels, from undergrads to established researchers.
+It can also help close the academic gap that is generated by uneven access to computational resources across students belonging to different groups \citep{kewalramani2018student}, where the most affected learners usually belong to underrepresented minorities and rural areas \citep{warner2021quantifying}.
+Differences in access can also be due to gender-biased parental and community pressures, in which male identifying individuals are more likely to be encouraged to perform activities related to computers \citep{google2016diversity}, while female identifying individuals are discouraged, starting from as early as elementray school \citep{master_gender_2021}.
 
 % \citep{roland2002think}
 Some universities and academic groups have started to incorporate reproducibility as a subject into their curriculum
@@ -359,11 +361,6 @@ The focus of these resources has been for students to acquire and practice skill
 The principles identified and outlined here can be used to set learning goals and outcomes for new reproducibility syllabi.
 Ultimately, the long term improvement of reproducibility rates in science will depend on our ability to intentionally integrate best practices for achieving reproducibility into the educational framework of future data scientists \citep{nasem2018data}.
 Inclusion of reproducibility into the data acumen of undergraduate curriculum will provide college learners and future researchers with the tools to develop the fundamental skills needed to successfully create reproducible scientific workflows and research products.
-
-The principles described here are relevant to facilitate adoption of software and analysis workflows among researchers at different academic levels, from undergrads to established researchers.
-They can also help close the academic gap that is generated by uneven access to computational resources across students belonging to different groups \citep{kewalramani2018student}, where the most affected learners usually belong to underrepresented minorities and rural areas \citep{warner2021quantifying}.
-Differences in access can also be due to gender-biased parental and community pressures, in which male identifying individuals are more likely to be encouraged to perform activities related to computers \citep{google2016diversity}, while female identifying individuals are discouraged, starting from as early as elementray school \citep{master_gender_2021}.
-These principles can be used to improve not only reproducibility practices, but also ease adoption of computational resources in the natural sciences.
 
 
 \bigskip

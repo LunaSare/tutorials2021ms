@@ -59,7 +59,7 @@ Thanks. We reviewed and fixed missing spaces across (hopefully) the entire manus
 
 *2. It might be appropriate to consider citing this in-process work (https://arxiv.org/abs/2202.09504)*
 
-We agree. We have cited this work...
+We agree. We have cited this work at the end of the first paragraph of the Conlcusion section: "These approaches not only teach reproducibility, but also make the teaching process itself reproducible (Dogucu & Cetinkaya-Rundel 2022). 
 
 &nbsp;  &nbsp;
 
@@ -83,7 +83,7 @@ Thanks. We went over the entire bib file and capitalized article and book titles
 *Comments to the Author:*
 *Thank you for reviewing the manuscript according to reviewers feedback. One issue which is pointed by one reviewer is mentioning package version - which is your first section in the online resource you discuss, so it will be easy to incorporate.*
 
-Thank you! We addressed that on section...
+Thank you! We addressed that on the first paragraph of the Conclusion section.
 
 &nbsp;  &nbsp;
 
@@ -111,10 +111,10 @@ We really appreciate all comments and suggestions made on the initial review!
 *Comments to the Author*
 *A significant barrier not discussed here is the deprecation of functions in open software packages like R and Python. It often requires considerable programming savvy to repair code that has fallen victim to deprecation.*
 
-Thank you, the point that you raise is very important. Associate Editor correctly points out that this can be addressed by providing information on package version used. In general, old package versions remain accessible, and persist in time, so they can be used to reproduce an analysis, even long time after a function had been deprecated. 
+Thank you, the point that you raise is very important. Associate Editor highlighted your comment and points out that this can be addressed by providing information on package version used. In general, old package versions remain accessible, and persist in time, so they can be used to reproduce an analysis, even long time after a function had been deprecated. 
 The teaching materials that we use as example include a section that addresses documenting package versions used for an analysis.
 
-We elaborate on this barrier on section...
+We now discuss this barrier on the first paragraph of the Conclusion section.
 
 &nbsp;  &nbsp;
 
